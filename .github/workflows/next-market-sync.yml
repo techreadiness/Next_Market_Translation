@@ -1,0 +1,67 @@
+name: Next-Market-Global-Sync
+
+on:
+  push:
+    paths:
+      - 'ko/**' 
+    branches:
+      - main 
+  workflow_dispatch: 
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: DeepL Multi-Language Engine
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: |
+          TARGET_LANGS=("en" "zh" "ja")
+          DEEPL_CODES=("EN-US" "ZH" "JA")
+
+          if [ ! -d "ko" ]; then exit 0; fi
+
+          find ko -name "*.md" | while read file; do
+            REL_PATH=${file#ko/}
+            
+            for i in "${!TARGET_LANGS[@]}"; do
+              LANG=${TARGET_LANGS[$i]}
+              CODE=${DEEPL_CODES[$i]}
+              TARGET_FILE="$LANG/$REL_PATH"
+              mkdir -p "$(dirname "$TARGET_FILE")"
+
+              echo "Translating: $file -> $TARGET_FILE"
+
+              # 브랜드명 보호 (HTML 태그 삽입)
+              ORIGINAL_CONTENT=$(cat "$file")
+              PROTECTED_CONTENT=$(echo "$ORIGINAL_CONTENT" | sed 's/Next Market/<span translate="no">Next Market<\/span>/g')
+
+              # DeepL API 호출
+              RESPONSE=$(curl -s -X POST "https://api-free.deepl.com/v2/translate" \
+                -H "Authorization: DeepL-Auth-Key $DEEPL_API_KEY" \
+                -d "text=$PROTECTED_CONTENT" \
+                -d "source_lang=KO" \
+                -d "target_lang=$CODE" \
+                -d "tag_handling=html" \
+                -d "preserve_formatting=1")
+
+              TRANSLATED_RAW=$(echo "$RESPONSE" | jq -r '.translations[0].text // empty')
+
+              if [ -n "$TRANSLATED_RAW" ] && [ "$TRANSLATED_RAW" != "null" ]; then
+                # 보호 태그 제거 및 최종 저장
+                FINAL_CONTENT=$(echo "$TRANSLATED_RAW" | sed 's/<span translate="no">Next Market<\/span>/Next Market/g')
+                echo "$FINAL_CONTENT" > "$TARGET_FILE"
+              fi
+            done
+          done
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "Next-Market-Bot"
+          git config --global user.email "bot@unifi.network"
+          git add en/ zh/ ja/
+          git commit -m "docs: 3개 국어 자동 번역 완료" || echo "No changes"
+          git push origin main
