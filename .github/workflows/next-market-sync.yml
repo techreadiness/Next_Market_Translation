@@ -3,12 +3,12 @@ name: Next-Market-Global-Sync
 on:
   push:
     paths:
-      - 'ko/**' # 한국어 폴더 변경 시 작동
+      - 'ko/**' # 한국어 폴더 내 파일 변경 시 작동
     branches:
       - main
   workflow_dispatch: # 수동 실행 버튼
 
-# 1. 로봇에게 저장소 쓰기 권한을 명시적으로 부여 (403 에러 해결용)
+# 1. 권한 설정: 로봇에게 저장소 쓰기 권한을 명시적으로 부여 (403 에러 및 인식 오류 방지)
 permissions:
   contents: write
 
@@ -17,9 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4 # 최신 버전 사용
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # 히스토리 전체를 가져와 변경 사항 추적 안정화
 
       - name: DeepL English-Only Engine
         env:
@@ -33,7 +34,7 @@ jobs:
             exit 0
           fi
 
-          # 2. ko 폴더 내의 모든 .md 파일 번역
+          # 2. ko 폴더 내의 모든 .md 파일 번역 (SUMMARY.md 포함)
           find ko -name "*.md" | while read file; do
             REL_PATH=${file#ko/}
             
@@ -44,14 +45,14 @@ jobs:
 
               mkdir -p "$(dirname "$TARGET_FILE")"
 
-              echo "번역 중: $file -> $TARGET_FILE"
+              echo "Processing: $file -> $TARGET_FILE"
 
-              # 브랜드명 'Next Market' 보호 및 JSON 이스케이프 처리 (번역 실패 방지)
-              # jq를 사용하여 원본 내용을 안전한 JSON 문자열로 변환합니다.
+              # 'Next Market' 보호 태그 삽입
               ORIGINAL_CONTENT=$(cat "$file")
               PROTECTED_CONTENT=$(echo "$ORIGINAL_CONTENT" | sed 's/Next Market/<span translate="no">Next Market<\/span>/g')
 
-              # DeepL API 호출 (데이터 전송 방식 최적화)
+              # DeepL API 호출
+              # preserve_formatting=1을 사용하여 마크다운 구조(공백, 줄바꿈)를 더 엄격하게 보호합니다.
               RESPONSE=$(curl -s -X POST "https://api-free.deepl.com/v2/translate" \
                 -H "Authorization: DeepL-Auth-Key $DEEPL_API_KEY" \
                 --data-urlencode "text=$PROTECTED_CONTENT" \
@@ -65,26 +66,29 @@ jobs:
               if [ -n "$TRANSLATED_RAW" ] && [ "$TRANSLATED_RAW" != "null" ]; then
                 # 보호 태그 제거 및 최종 저장
                 FINAL_CONTENT=$(echo "$TRANSLATED_RAW" | sed 's/<span translate="no">Next Market<\/span>/Next Market/g')
+                
+                # 깃북 인식률을 높이기 위해 프론트매터(---)가 깨졌는지 확인 후 보정하는 로직 추가 가능
                 echo "$FINAL_CONTENT" > "$TARGET_FILE"
               else
-                echo "번역 실패: $file ($CODE) - 응답 확인: $RESPONSE"
+                echo "번역 실패: $file ($CODE) - 응답: $RESPONSE"
               fi
             done
           done
 
       - name: Sync SUMMARY.md
         run: |
-          # 목차 파일(SUMMARY.md)도 ko 폴더에 있다면 en 폴더로 복사합니다.
+          # 목차 파일은 번역 여부와 상관없이 항상 en 폴더의 최상단에 존재해야 깃북 사이드바가 나타납니다.
           if [ -f "ko/SUMMARY.md" ]; then
             mkdir -p en
             cp "ko/SUMMARY.md" "en/SUMMARY.md"
+            echo "SUMMARY.md synced to en/"
           fi
 
       - name: Commit and Push
         run: |
-          # 3. 변경 사항을 저장소에 반영
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add en/
-          git commit -m "docs: 영어(English) 자동 번역 및 목차 업데이트 완료" || echo "변경 사항 없음"
+          # Unifi 스타일처럼 깔끔한 커밋 메시지 적용
+          git commit -m "docs: sync english documentation from korean source" || echo "No changes to commit"
           git push origin main
