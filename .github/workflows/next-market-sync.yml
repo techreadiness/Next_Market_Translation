@@ -3,10 +3,10 @@ name: Next-Market-Global-Sync
 on:
   push:
     paths:
-      - 'ko/**' 
+      - 'ko/**' # 한국어 폴더 변경 시 작동
     branches:
-      - main 
-  workflow_dispatch: 
+      - main
+  workflow_dispatch: # 수동 실행 버튼
 
 jobs:
   translate:
@@ -19,11 +19,16 @@ jobs:
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: |
+          # 번역 대상 언어 설정 (영어, 중국어, 일본어)
           TARGET_LANGS=("en" "zh" "ja")
           DEEPL_CODES=("EN-US" "ZH" "JA")
 
-          if [ ! -d "ko" ]; then exit 0; fi
+          if [ ! -d "ko" ]; then
+            echo "ko 폴더를 찾을 수 없습니다. 작업을 중단합니다."
+            exit 0
+          fi
 
+          # 1. ko 폴더 내의 모든 .md 파일 번역 (SUMMARY.md 포함)
           find ko -name "*.md" | while read file; do
             REL_PATH=${file#ko/}
             
@@ -31,15 +36,17 @@ jobs:
               LANG=${TARGET_LANGS[$i]}
               CODE=${DEEPL_CODES[$i]}
               TARGET_FILE="$LANG/$REL_PATH"
+
+              # 대상 폴더 생성
               mkdir -p "$(dirname "$TARGET_FILE")"
 
-              echo "Translating: $file -> $TARGET_FILE"
+              echo "번역 중: $file -> $TARGET_FILE ($CODE)"
 
-              # 브랜드명 보호 (HTML 태그 삽입)
+              # 브랜드명 'Next Market' 보호 (HTML 태그 삽입)
               ORIGINAL_CONTENT=$(cat "$file")
               PROTECTED_CONTENT=$(echo "$ORIGINAL_CONTENT" | sed 's/Next Market/<span translate="no">Next Market<\/span>/g')
 
-              # DeepL API 호출
+              # DeepL API 호출 (tag_handling=html로 구조 보호)
               RESPONSE=$(curl -s -X POST "https://api-free.deepl.com/v2/translate" \
                 -H "Authorization: DeepL-Auth-Key $DEEPL_API_KEY" \
                 -d "text=$PROTECTED_CONTENT" \
@@ -51,17 +58,20 @@ jobs:
               TRANSLATED_RAW=$(echo "$RESPONSE" | jq -r '.translations[0].text // empty')
 
               if [ -n "$TRANSLATED_RAW" ] && [ "$TRANSLATED_RAW" != "null" ]; then
-                # 보호 태그 제거 및 최종 저장
+                # 보호 태그 제거 및 결과 저장
                 FINAL_CONTENT=$(echo "$TRANSLATED_RAW" | sed 's/<span translate="no">Next Market<\/span>/Next Market/g')
                 echo "$FINAL_CONTENT" > "$TARGET_FILE"
+              else
+                echo "번역 실패: $file ($CODE)"
               fi
             done
           done
 
       - name: Commit and Push
         run: |
+          # 변경 사항을 로봇 계정으로 저장소에 반영
           git config --global user.name "Next-Market-Bot"
           git config --global user.email "bot@unifi.network"
           git add en/ zh/ ja/
-          git commit -m "docs: 3개 국어 자동 번역 완료" || echo "No changes"
+          git commit -m "docs: 3개 국어 자동 번역 완료 (Next Market 보호 적용)" || echo "변경 사항 없음"
           git push origin main
