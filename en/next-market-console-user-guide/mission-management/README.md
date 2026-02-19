@@ -9,19 +9,17 @@ metaLinks:
 The Mission Management page allows you to create missions and manage their operational status.
 
 * Features Provided
-  * [Create Mission](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-7#post-api-v1-incentive-mission)
-  * [Edit Mission](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-7#put-api-v1-incentive-mission-missionid)
-
-⚠️ Important Notes
+  * [미션 생성](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-7#post-api-v1-incentive-mission) [미션 수정](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-7#put-api-v1-incentive-mission-missionid)
+  ⚠️ Important Notes
 
 * Please register missions only after prior consultation with LINE NEXT.
 * Mission management does not support CSV upload functionality. All missions must be registered individually via the Console.
-* Registered missions will only be displayed on NEXT Market. If you wish your mission to appear on the Dapp Portal USDt Rewards section, please make a separate request to your NEXT business manager.
-  * Note: For Dapp Portal USDt Rewards exposure, a separate logo image (420x420px) must be submitted.
+* Registered missions will only be displayed on NEXT Market. If you wish for your mission to appear on the Dapp Portal USDt Rewards section, please make a separate request to the NEXT business team.
+  * However, for Dapp Portal USDt reward exposure, a separate logo image (420x420px) must be submitted.
 
 ## Mission Creation
 
-Mission creation is the function to register and manage missions.
+Mission Creation is the feature for registering and managing missions.
 
 {% stepper %}
 {% step %}
@@ -32,7 +30,7 @@ Mission creation is the function to register and manage missions.
 {% endstep %}
 
 {% step %}
-### Create a Mission
+### Create Mission
 
 * Select the Create Mission button to proceed to the registration screen.
 

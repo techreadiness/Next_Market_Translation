@@ -9,28 +9,27 @@ metaLinks:
 **The Item Ability Management page is where you register and manage &#x27;ability items (types)&#x27; to be used for C2C items.**\
 After pre-registering standard information such as ability names and display units, you can select and use these abilities when registering items or C2C sales.
 
-Provided Features
+Provided Functions
 
-* [Register Item Ability Settings](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#post-api-v1-item-ability)
-* [Modify Item Ability Settings](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#put-api-v1-item-ability-code)
+* [아이템 능력 설정 등록](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#post-api-v1-item-ability)
+* [아이템 능력 설정 수정](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#put-api-v1-item-ability-code)
+## Registering C2C Item Abilities (Individual Registration)
 
-## C2C Item Capability Registration (Individual Registration)
-
-C2C item capability registration supports **individual registration**.
-When registering a small number of item capabilities, you can create them through individual registration.
+C2C item ability registration supports **individual registration**.\
+When registering a small number of item abilities, you can create them through individual registration.
 
 {% stepper %}
 {% step %}
-### Select the C2C Item Capability Management Page
+### Selecting the C2C Item Ability Management Page
 
 * Access NEXT Market Console
-* Select the **C2C Item Ability Management** page from the left menu
+* Select the **C2C Item Capability Management** page from the left menu
 {% endstep %}
 
 {% step %}
-### Select Ability Registration
+### Select Capability Registration
 
-* Select the Ability Registration button to proceed to the item ability registration screen.
+* Select the Capability Registration button to proceed to the item capability registration screen.
 
 <figure><img src="../.gitbook/assets/아이템 능력 관리_등록.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}

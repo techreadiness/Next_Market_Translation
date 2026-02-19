@@ -14,11 +14,12 @@ NEXT Market and the Game require bidirectional API communication. NEXT Market re
 |             | <p>Game-<br>&gt; NEXT Market</p> | <mark style="color:blue;">**IP Address List**</mark>                                                                                                                             | [https://app-sdk.nextmarket.games​](https://app-sdk.nextmarket.games) |
 | Production  | <p>NEXT Market-<br>&gt; Game</p> | <p>147.92.139.225<br>147.92.139.226<br>147.92.139.227<br>147.92.139.228<br>147.92.235.249<br>147.92.235.30<br>147.92.238.90<br>147.92.238.95<br>43.223.9.34<br>43.223.9.42</p> | <mark style="color:blue;">**Game Server Domain or IP and Port Information**</mark>         |
 |             | <p>Game-<br>&gt; NEXT Market</p> | <mark style="color:blue;">**IP Address List**</mark>
-                                                                                                                               | [https://sdk.nextmarket.games​](https://sdk.nextmarket.games)         |
+                                                                                                                               | [https://sdk.nextmarket.games​](https://sdk.nextmarket.games)
+           |
 
-* <mark style="color:blue;">**Information Required from Game Side to NEXT Market (Provided per Preview/Production Environment)**</mark>
-  * Server domain or IP and port information for NEXT Market to call the game side (Destination)
-  * Source IP used when the game calls NEXT Market (Source)
-* Information requiring configuration on the game side (if network settings are needed)
-  * Source IP used when NEXT Market calls the game (Source)
-  * API Endpoint of NEXT Market to be called by the game (Destination)
+* <mark style="color:blue;">**Information Game Side Must Provide to NEXT Market (Provided per Preview/Production Environment)**</mark>
+  * Server domain or IP and port information (Destination) that NEXT Market calls to the game side
+  * Source IP (Source) used when the game side calls NEXT Market
+* Information requiring configuration on the game side (if network configuration is needed)
+  * Source IP used by NEXT Market when calling the game (Source)
+  * API Endpoint of NEXT Market to be called by the game side (Destination)

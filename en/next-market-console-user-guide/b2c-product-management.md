@@ -8,23 +8,22 @@ metaLinks:
 
 The B2C Product Management page allows you to register and manage B2C products.
 
-This page provides B2C product-related API functionality within the Console environment.
+This page provides B2C product-related API functions within the Console environment.
 
-* Provided Features
-  * [Section Registration](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-3#post-api-v1-sale-b2c-section)
-  * [Section Modification](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-3#patch-api-v1-sale-b2c-section-sectionid)
-  * [Register for Sale](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-4#post-api-v1-sale-b2c)
-  * [Selling Changes](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-4#patch-api-v1-sale-b2c-b2csaleid)
-
-⚠️ Important Notes
+* Provided Functions
+  * [섹션 등록](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-3#post-api-v1-sale-b2c-section)
+  * [섹션 변경](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-3#patch-api-v1-sale-b2c-section-sectionid)
+  * [판매 등록](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-4#post-api-v1-sale-b2c)
+  * [판매 변경](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-4#patch-api-v1-sale-b2c-b2csaleid)
+  ⚠️ Important Notes
 
 * B2C product registration does not support CSV upload. All B2C products must be registered individually via the Console.
-* Please register B2C products only after prior consultation with LINE NEXT.
+* Please consult with LINE NEXT beforehand before registering B2C products.
 
 ## Section Management
 
 Sections are **classification areas for displaying B2C products in groups**.
-Use sections when you have multiple product types or need to distinguish between items.
+You can use sections when you have multiple product types or need to distinguish between items.
 
 ### Section Configuration Policy
 

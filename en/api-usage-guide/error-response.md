@@ -14,20 +14,20 @@ For errors specific to particular APIs, please refer to the error codes in the A
 
 | HTTP Status | HTTP Code                                             | Description                                                                     |
 | ----------- | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
-| 500         | [Error Code](error-response.md#error-response-format) | Server-side status abnormality error. Check the detailed response code.                                           |
-| 503         | SERVICE\_UNAVAILABLE                                  | An abnormal response is returned due to a server-side infrastructure configuration error. Wait for recovery when this occurs. Also occurs during system maintenance. |
+| 500         | [Error Code](error-response.md#error-response-format) | Server-side status error. Check the detailed response code.                                           |
+| 503         | SERVICE\_UNAVAILABLE                                  | An abnormal response is returned due to an error in server-side infrastructure configuration. Wait for recovery when this occurs. Also occurs during system maintenance. |
 | 400         | BAD_REQUEST                                          | There is an issue with the format or length of the input parameters. Please recheck the input parameters.                              |
-| 403         | NOT_ALLOWED_API                                       | Unauthorized API path                                                                |
+| 403         | NOT_ALLOW_API                                       | Unauthorized API path                                                                |
 | 406         | [Error Code](error-response.md#error-response-format) | The input request cannot be processed. Please check the detailed response code.                                      |
 | 401         | UNAUTHORIZED                                          | The API Key or Secret is incorrect, or permissions have been revoked.                                          |
-| 404         | NOT_FOUND                                            | Invalid URI specified.                                                                |
-| 405         |                                                       | Unsupported HTTP Method specified.                                                    |
-| 406         | NOT_ACCEPTABLE                                       |                                                                                 |
-| 429         |                                                       | Exceeded request quota due to excessive requests.                                                       |
+| 404         | NOT_FOUND                                            | An incorrect URI was specified.                                                                |
+| 405         |                                                       | An unsupported HTTP Method was specified.                                                    |
+| 406         | NOT\_ACCEPTABLE                                       |                                                                                 |
+| 429         |                                                       | The request count has been exceeded due to too many requests.                                                       |
 
 ### Error Response Format
 
-For HTTP Status 500 and 406, the response body always returns the detailed error code in the following format:
+For HTTP Status 500 and 406, the response body always returns the detailed error code in the following format as `code` and `message`.
 
 ```json
 {
@@ -38,7 +38,7 @@ For HTTP Status 500 and 406, the response body always returns the detailed error
 
 ### Retryable Error Response
 
-A 500 error response is returned when a temporary state error occurs that allows for retries, or when specific data settings are not linked, requiring a retry after data configuration even though the request itself is valid. If a 500 error response is returned and the development team identifies it through monitoring as requiring action, they can request changes from us.
+A 500 error response is returned when a temporary state error occurs, allowing for retries, or when specific data settings are not linked, requiring a retry after data configuration even though the request itself is valid. If a 500 error response is returned, the development team can request changes from us if monitoring indicates it requires action.
 
 | code                    | message                            | description                                     |
 | ----------------------- | ---------------------------------- | ----------------------------------------------- |

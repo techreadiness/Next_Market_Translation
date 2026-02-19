@@ -8,23 +8,22 @@ metaLinks:
 
 The Item Management page allows you to register and manage items used in B2C and C2C transactions.
 
-This page provides the Item Registration API functionality within the Console environment.
+This page provides the item registration API functionality within the Console environment.
 
 * Provided Functions
-  * [Media File Upload](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#post-api-v1-media-upload)
-  * [Item Registration](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#post-api-v1-item)
-  * [Item Modification](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#put-api-v1-item-sku)
+  * [미디어 파일 업로드](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#post-api-v1-media-upload)
+  * [아이템 등록](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#post-api-v1-item)
+  * [아이템 변경](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#put-api-v1-item-sku)
+  ## Item Registration (Individual Registration)
 
-## Item Registration (Individual Registration)
-
-Item registration supports **individual registration**.
-When registering a small number of items, you can create them via individual registration.
+Item registration supports the **individual registration method**.
+When registering a small number of items, you can create them through individual registration.
 
 {% stepper %}
 {% step %}
 ### Select the Item Management Page
 
-* Access the NEXT Market Console
+* Access NEXT Market Console
 * Select the **Item Management** page from the left menu
 {% endstep %}
 

@@ -7,12 +7,14 @@ metaLinks:
 
 ### Preview
 
-Game ➡️ Store endpoint: [    https://app-sdk.nextmarket.games​](https://app-sdk.nextmarket.games)
+Game ➡️ Store endpoint: [	https://app-sdk.nextmarket.games​](https://app-sdk.nextmarket.games)
+
 
 Store ➡️ Game endpoint: Game server domain or IP and port
 
 ### Prod
 
-Game ➡️ Store endpoint: [https://sdk.nextmarket.games](https://sdk.nextmarket.games)
+Game ➡️ Store endpoint: [https://sdk.nextmarket.games​](https://sdk.nextmarket.games)
+
 
 Store ➡️ Game endpoint: Game server domain or IP and port

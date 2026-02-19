@@ -33,9 +33,9 @@ NEXT Market and the game require bidirectional API calls, necessitating the remo
 
 <details>
 
-<summary>How should dynamic IP handling be communicated?</summary>
+<summary>How should dynamic IP addresses be communicated?</summary>
 
-If you use a dynamic IP, you must register it in the ACL each time, which may take approximately 3 business days to process. Therefore, we recommend using a static IP.
+If using a dynamic IP, ACL registration is required each time, and processing may take approximately 3 business days. Therefore, we recommend using a static IP.
 
 </details>
 
@@ -182,7 +182,7 @@ The session renews hourly based on user activity and can be extended up to 180 d
 
 The error occurs because NEXT Market cannot recognize the region.
 
-The region must be provided as the agreed-upon country code ([https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), in uppercase format).
+The region must be provided as an agreed-upon country code([https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), uppercase format).
 
 </details>
 
@@ -190,7 +190,7 @@ The region must be provided as the agreed-upon country code ([https://en.wikiped
 
 <summary>Can the signature value be replaced with something other than the server/character?</summary>
 
-You can set any value as long as it is a string that can be publicly displayed to the logged-in user.
+You can set any value as long as it is a string that can be publicly disclosed to the logged-in user.
 
 </details>## Game Account Status Inquiry
 
@@ -198,9 +198,9 @@ You can set any value as long as it is a string that can be publicly displayed t
 
 <summary>Is {{endpoint}}/next-market/ fixed?</summary>
 
-The path after the endpoint is fixed.
+The path following the endpoint is fixed.
 
-However, if setting the root path to `/next-market` is difficult, you can configure a subpath using the format `https://{domain}/{subpath}/next-market/…`. Share this subpath (including the subpath) with the development team for configuration.
+However, if setting the root path to `/next-market` is difficult, you can configure a subpath using the format `https://{domain}/{subpath}/next-market/…`. Share this subpath (including `subpath`) with the development team for configuration.
 
 </details>## Items
 
@@ -574,7 +574,7 @@ Preview and Prod are completely independent environments, so authentication will
 
 If you plan to provide NEXT Market via an in-game Webview, prior notification to LINE NEXT is required.
 
-Please refer to the following guide document for details. ([Guide](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-8#market-webview))
+For details, please refer to the following guide document: ([가이드](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-8#market-webview))
 
 </details>## Testing
 
@@ -595,7 +595,7 @@ We recommend focusing on:
 - Login functionality
 - Item delivery after purchasing products
 
-To allow time for issue resolution, please complete testing for the above items at least 3 business days before the web shop launch.
+To address any issues discovered during testing, please complete testing for the above items at least 3 business days before the web shop launch.
 
 </details>
 
@@ -605,7 +605,7 @@ To allow time for issue resolution, please complete testing for the above items 
 
 We conduct testing with inspection mode enabled in the Preview environment to enhance accessibility and prevent general users from accessing the store before its official release. Please note that testing will follow the same procedure with inspection mode enabled at the Prod launch as well.
 
-For detailed information, please refer to the following guide document. ([Guide](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-8#market))
+For detailed information, please refer to the following guide document: ([가이드](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-8#market))
 
 </details>
 
@@ -621,6 +621,6 @@ You must register the product again and then proceed with testing. However, plea
 
 <summary>Can I use NEXT Market if my game account is restricted?</summary>
 
-No. NEXT Market is only accessible after logging into the game, so it cannot be used if the game account is restricted. However, viewing a simple item list may be possible.
+No. NEXT Market is only accessible after logging into the game, so it cannot be used if the game account is restricted. However, viewing the item list may still be possible.
 
 </details>
