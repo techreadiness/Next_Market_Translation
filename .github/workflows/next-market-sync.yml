@@ -3,12 +3,9 @@ name: Next-Market-English-Sync
 on:
   push:
     paths:
-      - 'ko/**' # 한국어 폴더가 바뀔 때만 작동
-    branches:
-      - main
-  workflow_dispatch: # 수동 실행 버튼
+      - 'ko/**'
+  workflow_dispatch:
 
-# 1. 403 Forbidden 에러 해결을 위해 쓰기 권한을 명시적으로 부여합니다.
 permissions:
   contents: write
 
@@ -18,64 +15,73 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: DeepL English Engine
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: |
-          # 현재는 영어(en)만 번역하도록 설정했습니다.
-          TARGET_LANGS=("en")
-          DEEPL_CODES=("EN-US")
+          TARGET_LANG="en"
+          DEEPL_CODE="EN-US"
 
-          if [ ! -d "ko" ]; then
-            echo "ko 폴더를 찾을 수 없습니다."
-            exit 0
-          fi
+          if [ ! -d "ko" ]; then echo "ko 폴더 없음"; exit 0; fi
 
-          # 2. ko 폴더 내의 모든 마크다운 파일 번역
           find ko -name "*.md" | while read file; do
             REL_PATH=${file#ko/}
-            for i in "${!TARGET_LANGS[@]}"; do
-              LANG=${TARGET_LANGS[$i]}
-              CODE=${DEEPL_CODES[$i]}
-              TARGET_FILE="$LANG/$REL_PATH"
-              mkdir -p "$(dirname "$TARGET_FILE")"
+            TARGET_FILE="$TARGET_LANG/$REL_PATH"
+            mkdir -p "$(dirname "$TARGET_FILE")"
 
-              echo "영어 번역 중: $file -> $TARGET_FILE"
+            echo "번역 시작: $file"
 
-              # 브랜드명 'Next Market' 보호 (DeepL이 번역하지 않도록 조치)
-              ORIGINAL_CONTENT=$(cat "$file")
-              PROTECTED_CONTENT=$(echo "$ORIGINAL_CONTENT" | sed 's/Next Market/<span translate="no">Next Market<\/span>/g')
+            # 1. 원문 읽기
+            CONTENT=$(cat "$file")
 
-              # DeepL API 호출 (구조 보호를 위해 URL 인코딩 전송)
-              RESPONSE=$(curl -s -X POST "https://api-free.deepl.com/v2/translate" \
-                -H "Authorization: DeepL-Auth-Key $DEEPL_API_KEY" \
-                --data-urlencode "text=$PROTECTED_CONTENT" \
-                -d "source_lang=KO" \
-                -d "target_lang=$CODE" \
-                -d "tag_handling=html" \
-                -d "preserve_formatting=1")
+            # 2. 보호 조치 (Next Market + 이미지/링크 태그)
+            # 고유명사 보호
+            CONTENT=$(echo "$CONTENT" | sed 's/Next Market/<span translate="no">Next Market<\/span>/g')
+            # 이미지 태그 보호 (![alt](path))
+            CONTENT=$(echo "$CONTENT" | sed -E 's/(!\[[^]]*\]\([^)]*\))/<span translate="no">\1<\/span>/g')
+            # 일반 링크 보호 ([text](path))
+            CONTENT=$(echo "$CONTENT" | sed -E 's/([^!]\[[^]]*\]\([^)]*\))/<span translate="no">\1<\/span>/g')
 
-              TRANSLATED_RAW=$(echo "$RESPONSE" | jq -r '.translations[0].text // empty')
+            # 3. DeepL API 호출 (HTML 태그 핸들링 활성화)
+            RESPONSE=$(curl -s -X POST "https://api-free.deepl.com/v2/translate" \
+              -H "Authorization: DeepL-Auth-Key $DEEPL_API_KEY" \
+              --data-urlencode "text=$CONTENT" \
+              -d "source_lang=KO" \
+              -d "target_lang=$DEEPL_CODE" \
+              -d "tag_handling=html" \
+              -d "non_splitting_tags=span")
 
-              if [ -n "$TRANSLATED_RAW" ] && [ "$TRANSLATED_RAW" != "null" ]; then
-                # 보호 태그 제거 및 최종 저장
-                FINAL_CONTENT=$(echo "$TRANSLATED_RAW" | sed 's/<span translate="no">Next Market<\/span>/Next Market/g')
-                echo "$FINAL_CONTENT" > "$TARGET_FILE"
-              else
-                echo "번역 실패: $file"
-              fi
-            done
+            TRANSLATED=$(echo "$RESPONSE" | jq -r '.translations[0].text // empty')
+
+            if [ -n "$TRANSLATED" ] && [ "$TRANSLATED" != "null" ]; then
+              # 4. 보호용 span 태그 제거 (정규식으로 모든 span 태그 삭제)
+              FINAL_CONTENT=$(echo "$TRANSLATED" | sed -E 's/<\/?span[^>]*>//g')
+              echo "$FINAL_CONTENT" > "$TARGET_FILE"
+            else
+              echo "⚠️ 번역 실패: $file"
+            fi
           done
 
-      - name: Sync SUMMARY.md
+      - name: Sync & Translate SUMMARY.md
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: |
-          # 영어 사이드바 구성을 위해 목차 파일 복제
           if [ -f "ko/SUMMARY.md" ]; then
-            mkdir -p en
-            cp "ko/SUMMARY.md" "en/SUMMARY.md"
+            # SUMMARY.md는 목차이므로 링크 구조가 중요함. 위와 동일한 로직 적용
+            CONTENT=$(cat "ko/SUMMARY.md")
+            CONTENT=$(echo "$CONTENT" | sed 's/Next Market/<span translate="no">Next Market<\/span>/g')
+            CONTENT=$(echo "$CONTENT" | sed -E 's/(\[[^]]*\]\([^)]*\))/<span translate="no">\1<\/span>/g')
+            
+            RESPONSE=$(curl -s -X POST "https://api-free.deepl.com/v2/translate" \
+              -H "Authorization: DeepL-Auth-Key $DEEPL_API_KEY" \
+              --data-urlencode "text=$CONTENT" \
+              -d "source_lang=KO" \
+              -d "target_lang=EN-US" \
+              -d "tag_handling=html")
+            
+            TRANSLATED=$(echo "$RESPONSE" | jq -r '.translations[0].text')
+            echo "$TRANSLATED" | sed -E 's/<\/?span[^>]*>//g' > "en/SUMMARY.md"
           fi
 
       - name: Commit and Push
@@ -83,5 +89,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add en/
-          git commit -m "docs: 영어 번역본 업데이트 및 구조 교정" || echo "변경 사항 없음"
+          git commit -m "docs: Next Market 영어 번역 및 이미지 경로 보존" || echo "변경 없음"
           git push origin main
