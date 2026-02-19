@@ -32,12 +32,12 @@ metaLinks:
 
 ### v1.5\_2025.07.08
 
-* Added `items[].skus` and `items[].quantity` to [Sales Data Query](https://github.com/tech-support-trade/docs/wiki/API-Guide#매출-데이터-조회)
-* [Sales Registration Request](https://github.com/tech-support-trade/docs/wiki/API-Guide#판매-등록-요청): limitPurchaseCount changed to an optional field and description updated.
+* Added [Sales Data Query](https://github.com/tech-support-trade/docs/wiki/API-Guide#%EB%A7%A4%EC%B6%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A1%B0%ED%9A%8C) Added items\[].skus, items\[].quantity
+* [Sales Registration Request](https://github.com/tech-support-trade/docs/wiki/API-Guide#%ED%8C%90%EB%A7%A4-%EB%93%B1%EB%A1%9D-%EC%9A%94%EC%B2%AD) changed limitPurchaseCount to an optional field and updated its description.
 
 ### v1.4\_2025.07.04
 
-* Supported multi-currency registration for B2C sales.
+* Supported multi-currency registration for B2C sales listings.
   * Removed price and currency input fields
   * Added multiCurrencyPrice input field
 * Changed periodType field name → periodicType
@@ -45,20 +45,21 @@ metaLinks:
 ### v1.3\_2025.07.01
 
 * Added GREY and NONE values to color input field
-* Changed link.deviceType from PC → WEB
+* Changed link.deviceType from PC to WEB
 
 ### v1.2\_2025.06.26
 
-* Item ability settings: Changed color to content.color
-* Added [C2C Sale Cancellation Request](https://github.com/tech-support-trade/docs/wiki/API-Guide#C2C-판매-취소-요청)
+* Modified color in item capability settings to content.color
+* Added [C2C Sale Cancellation Request](https://github.com/tech-support-trade/docs/wiki/API-Guide#C2C-%ED%8C%90%EB%A7%A4-%EC%B7%A8%EC%86%8C-%EC%9A%94%EC%B2%AD)
 
 ### v1.1\_2025.06.24
 
-* Added parameter definition for issuing tokens for C2C sale registration to [Store Authentication One-Time Token Request](https://github.com/tech-support-trade/docs/wiki/API-Guide#스토어-인증용-원타임-토큰-요청)
+* [Request for One-Time Token for Store Verification](https://github.com/tech-support-trade/docs/wiki/API-Guide#%EC%8A%A4%ED%86%A0%EC%96%B4-%EC%9D%B8%EC%A6%9D%EC%9A%A9- Added parameter definition for issuing tokens for C2C sale registration
 * Added c2cSaleId response field to [Sealing Request](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#undefined-20)
-* Added labels for API availability environment (`preview` `prod`)
-* Added [Sales Data Query](https://github.com/tech-support-trade/docs/wiki/API-Guide#매출-데이터-조회) (Available after 7/10)
+* Added labels for API availability environments (`preview` `prod`)
+* Added [Sales Data Query](https://github.com/tech-support-trade/docs/wiki/API-Guide#%EB%A7%A4%EC%B6%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A1%B0%ED%9A%8C) (Available after 7/10)
 
 ### v1.0\_2025.05.27
 
-* B2C, C2C, Mission\
+* Defined API specs for B2C, C2C, Mission\&amp;Reward
+* 🟡 Note: Some features are under review or only available in preview mode; verification is required before use.
