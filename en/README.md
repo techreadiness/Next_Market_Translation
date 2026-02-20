@@ -11,13 +11,13 @@ metaLinks:
 * A global cross-border game marketplace providing game developers and Web2 gamers with a new experience of a free economy.
 * Gamers can easily trade items in-game through 1:1 account linking with games, while game developers can monetize using a global stablecoin-based system.
 
-<figure><img src=".gitbook/assets/NEXT Market_1.png" alt=""><figcaption></figcaption></figure>## LINE NEXT
+<figure><img src="../.gitbook/assets/NEXT Market_1.png" alt=""><figcaption></figcaption></figure>## LINE NEXT
 
 * Aims to build a Web3 digital asset ecosystem by providing NEXT Market, Mini Dapps, and LINE/Web-based Web3 Wallet services.
 * Secured 65 million active wallets and 1.6 million purchasing wallets in 8 months → Owns Asia&#x27;s largest wallet network.
 * Formed a strategic partnership with Tether for an Asian digital dollar gateway.
 
-<figure><img src=".gitbook/assets/NEXT Market_2.png" alt=""><figcaption></figcaption></figure>## NEXT Market Key Features
+<figure><img src="../.gitbook/assets/NEXT Market_2.png" alt=""><figcaption></figcaption></figure>## NEXT Market Key Features
 
 ### 1. Game-Embedded Marketplace
 
@@ -57,6 +57,6 @@ Provides a custom webshop environment supporting global local payments and stabl
 * Provision of sales statistics and analytics dashboard
 * Provision of user retention insights
 
-<figure><img src=".gitbook/assets/NEXT Market_3.png" alt=""><figcaption></figcaption></figure>## Contact
+<figure><img src="../.gitbook/assets/NEXT Market_3.png" alt=""><figcaption></figcaption></figure>## Contact
 
 nextmarket\_bd@linecorp.com
