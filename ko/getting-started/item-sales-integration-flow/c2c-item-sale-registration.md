@@ -7,4 +7,4 @@ metaLinks:
 
 # C2C 아이템 판매 등록
 
-<figure><img src="../../.gitbook/assets/NM_C2CFlow.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/NM_C2CFlow.png" alt=""><figcaption></figcaption></figure>

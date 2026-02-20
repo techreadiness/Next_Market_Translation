@@ -47,7 +47,7 @@ B2C 상품 관리 페이지에서는 B2C 상품을 등록하고 관리할 수 �
 * 섹션 관리 영역에서 섹션 추가 버튼을 선택합니다.
 * 섹션 등록 화면으로 이동합니다.
 
-<figure><img src="../.gitbook/assets/B2C 상품 관리_섹션 추가.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 관리_섹션 추가.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -60,7 +60,7 @@ B2C 상품 관리 페이지에서는 B2C 상품을 등록하고 관리할 수 �
 | 표시 순서   | <ul><li>1 ~ 4 범위 내에서 설정 가능</li><li>설정된 순서에 따라 섹션이 노출됨</li></ul>                                                                                                                                                                                                 |
 | 활성화     | <ul><li>섹션의 노출 여부를 설정함</li><li>비활성화된 섹션은 NEXT Market에서 노출되지 않음</li></ul>                                                                                                                                                                                        |
 
-<figure><img src="../.gitbook/assets/B2C 상품 관리_섹션 등록.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 관리_섹션 등록.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -73,7 +73,7 @@ B2C 상품 관리 페이지에서는 B2C 상품을 등록하고 관리할 수 �
 * 섹션 수정 내용은 **NEXT Market에 즉시 반영**됩니다.
 * 노출 순서 및 섹션명 변경 시, 실제 상품 진열 화면에 영향을 줄 수 있으므로 **운영 중 변경 시 주의하여 수정**해 주시기 바랍니다.
 
-<figure><img src="../.gitbook/assets/B2C 상품 관리_섹션 수정.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 관리_섹션 수정.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -95,7 +95,7 @@ B2C 상품 등록은 B2C 상품을 생성하고 판매 정보를 관리할 수 �
 
 * 상품 등록 버튼 선택하여 상품 등록 화면으로 이동합니다.
 
-<figure><img src="../.gitbook/assets/B2C 상품 등록_상품 등록.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 등록_상품 등록.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -110,7 +110,7 @@ B2C 상품의 기본 정보를 입력합니다.
 | 상품명    | <ul><li>다국어 입력 지원: en, ko, ja, th, zh</li><li>아이템 상점 페이지 내 상품 타이틀로 노출되는 값</li><li>마켓에서 제공하는 언어에 대해 반드시 등록 필요</li></ul>                                                                                                                                                                                                                                                       |
 | 상품 설명  | <ul><li>다국어 입력 지원: en, ko, ja, th, zh</li><li>아이템 상점 페이지 내 상품 설명으로 노출되는 값</li><li>마켓에서 제공하는 언어에 대해 반드시 등록 필요</li><li><p>상품 설명 작성 가이드</p><ul><li><p>필수 포함 내용</p><ul><li>상품에 적용되는 아이템 설명</li><li>환불 정책</li><li>아이템 수령 방법 (ex. 우편함 지급 등)</li></ul></li><li><p>선택 내용</p><ul><li>상품에 적용되는 아이템의 제약 사항 (ex. 캐릭터 귀속 등)</li><li>구매 제한 조건 (ex. 일별 2회 구매)</li></ul></li></ul></li></ul> |
 
-<figure><img src="../.gitbook/assets/B2C 상품 등록_기본 정보.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 등록_기본 정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -127,7 +127,7 @@ B2C 상품의 가격을 설정합니다.
 | 상품 가격 (Fiat) | <ul><li>USD, KRW, JPY, TWD, THB, IDR, PHP 중 지원 통화의 금액 입력</li><li>형식: 소수점 둘째자리까지 입력 가능</li><li><p>단, 지원 통화의 최소 ~ 최대 범위 내로 가격 입력 가능</p><ul><li>USD: 1 ~ 750,000</li><li>KRW: 500 ~ 2,000,000</li><li>JPY: 100 ~ 110,000,000</li><li>TWD: 30 ~ 999,999</li><li>THB: 1 ~ 3,000,000</li><li>IDR: 1,000 ~ 5,000,000</li><li>PHP: 6 ~ 100,000</li></ul></li></ul> |
 | 상품 가격 (USDt) | <ul><li>USDt의 금액 입력</li><li>형식: 소수점 둘째자리까지 입력 가능</li><li><p>단, 최소 ~ 최대 범위 내로 가격 입력 가능</p><ul><li>USDt: 0.1 ~ 750,000</li></ul></li></ul>                                                                                                                                                                                                                   |
 
-<figure><img src="../.gitbook/assets/B2C 상품 등록_가격 정보.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 등록_가격 정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -143,11 +143,11 @@ B2C 상품이 마켓 UI에서 어떤 방식으로 노출·구매되는지 결정
 | 한번에 최대 구매 수량 | <ul><li>1회 주문 시 구매 가능한 최대 수량을 입력</li><li>최대 100개까지 설정 가능</li></ul>                                                                                                                                                                                                                                                                                                                      |
 | 배송 타입        | <ul><li><p>구매 시 사용될 배송 방식을 선택</p><ul><li>자동 배송: 구매 완료 시점에 시스템 자동 배송</li><li>수동 배송: 구매 완료 이후 특정 시점에 수기 배송</li></ul><p>⚠️ 수동 배송 방식은 LINE NEXT와 사전 협의가 필요</p></li></ul>                                                                                                                                                                                                                    |
 | 진열 순서        | <ul><li>섹션 내 상품의 노출 순서를 입력</li></ul>                                                                                                                                                                                                                                                                                                                                                    |
-| 성인 인증 필요     | <ul><li>성인 인증이 필요한 상품인 경우 활성화</li><li>성인 인증 전에는 상품 이미지가 미노출되며, 인증 후에는 상품 이미지가 정상적으로 노출됨</li><li>예시 이미지 (성인 인증 전)</li></ul><div><figure><img src="../.gitbook/assets/B2C 상품 등록_성인인증.png" alt="" width="133"><figcaption></figcaption></figure></div>                                                                                                                     |
+| 성인 인증 필요     | <ul><li>성인 인증이 필요한 상품인 경우 활성화</li><li>성인 인증 전에는 상품 이미지가 미노출되며, 인증 후에는 상품 이미지가 정상적으로 노출됨</li><li>예시 이미지 (성인 인증 전)</li></ul><div><figure><img src="../../.gitbook/assets/B2C 상품 등록_성인인증.png" alt="" width="133"><figcaption></figcaption></figure></div>                                                                                                                  |
 | 주기적 판매 타입    | <ul><li><p>계정 당 구매 가능 수량을 주기적으로 초기화할지 설정</p><ul><li>없음: 초기화 없음</li><li>매일 (<code>DAILY</code>): 매일 초기화</li><li>매주 (<code>WEEKLY</code>): 매주 초기화</li><li>매월 (<code>MONTHLY</code>): 매월 초기화</li></ul></li><li>판매 등록 API의 <code>abilties.periodicType</code> 값으로 전달</li></ul>                                                                                                              |
 | 초기화 기준 일시    | <ul><li>주기적 판매 설정 시 초기화가 적용될 기준 시점을 입력</li><li>yyyy-MM-dd HH:mm 형식으로 입력</li><li><p>설정 예시</p><ul><li><p>오픈 일자 기준 과거 시점으로 등록</p><ul><li>없음: 설정 불요</li><li>오픈 일자: 2025-12-16 10:00 KST (화요일)</li><li>매일: 2025-12-15 10:00 KST = 매일 10시 기준으로 초기화</li><li>매주: 2025-12-09 10:00 KST = 매주 화요일 10시 기준으로 초기화</li><li>매월: 2025-12-01 10:00 KST = 매월 1일 10시 기준으로 초기화</li></ul></li></ul></li></ul> |
 
-<figure><img src="../.gitbook/assets/B2C 상품 등록_구매 제한 및 설정.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 등록_구매 제한 및 설정.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -161,7 +161,7 @@ B2C 상품의 판매 시작일 및 종료일을 설정합니다.\
 | 판매 시작일 | <ul><li>B2C 상품 시작시점을 설정</li><li>형식: yyyy-MM-dd HH:mm (KST 기준)</li></ul> |
 | 판매 종료  | <ul><li>B2C 상품 종료시점을 설정</li><li>형식: yyyy-MM-dd HH:mm (KST 기준)</li></ul> |
 
-<figure><img src="../.gitbook/assets/B2C 상품 등록_판매 기간.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 등록_판매 기간.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -176,7 +176,7 @@ B2C 상품의 판매 시작일 및 종료일을 설정합니다.\
 
 ⚠️ 연결된 아이템 목록 (SKU)은 등록 후 수정이 불가능한 항목입니다. 연결된 아이템을 변경하려면 등록된 상품을 판매 종료하고 새로 등록해야 합니다.
 
-<figure><img src="../.gitbook/assets/B2C 상품 등록_아이템.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 등록_아이템.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -190,7 +190,7 @@ B2C 상품 수정은 **이미 등록된 상품의 정보를 변경해야 하는 
 * **수정하기** 버튼 클릭
 * 상품 정보 변경 후 저장
 
-<figure><img src="../.gitbook/assets/B2C 상품 등록_수정.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/B2C 상품 등록_수정.png" alt=""><figcaption></figcaption></figure>
 
 ### ⚠️  수정 시 유의사항
 

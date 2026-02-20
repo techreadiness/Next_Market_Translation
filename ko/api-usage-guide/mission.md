@@ -10,7 +10,7 @@ metaLinks:
 
 ### 미션 등록 및 달성 Flow
 
-<figure><img src="../.gitbook/assets/Mission_Achieve.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Mission_Achieve.png" alt=""><figcaption></figcaption></figure>
 
 {% openapi-operation spec="fiddle-next-market-api" path="/api/v1/incentive/mission" method="post" %}
 [OpenAPI fiddle-next-market-api](https://api.api-fiddle.com/v1/public/resources/oas_api_3_1/techreadinesss-organization-px3/next-market-api)

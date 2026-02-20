@@ -34,7 +34,7 @@ metaLinks:
 
 * 아이템 등록 버튼을 선택하여 아이템 등록 화면으로 이동합니다.
 
-<figure><img src="../.gitbook/assets/아이템 관리_아이템 등록.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 관리_아이템 등록.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -58,7 +58,7 @@ metaLinks:
 * 파일 크기: 10MB 이하
 * 이미지 사이즈: 배경 포함 72x72px
 
-<figure><img src="../.gitbook/assets/아이템 관리_미디어 파일 업로드.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 관리_미디어 파일 업로드.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -72,7 +72,7 @@ metaLinks:
 | 아이템 이름 (Required) | <ul><li>다국어 입력 지원: en, ko, ja, th, zh</li><li><p>아이템 목록 및 상세 화면에 표시되는 값</p><ul><li>마켓에서 제공하는 언어에 대해 반드시 등록 필요</li></ul></li></ul>                                                                                                                                  |
 | 아이템 설명 (Required) | <ul><li>아이템 등록 페이지에서는 아이템 이름으로 설정</li><li>상세 설명이 필요한 경우, <strong>CSV 업로드 방식</strong>을 통해 별도 등록 필요</li></ul>                                                                                                                                                        |
 
-<figure><img src="../.gitbook/assets/아이템 등록_기본정보.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 등록_기본정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -87,7 +87,7 @@ metaLinks:
 | 서브아이템 SKU | <ul><li>패키지 아이템의 구성 아이템 SKU 입력</li></ul> |
 | 수량        | <ul><li>서브 아이템의 수량 입력</li></ul>          |
 
-<figure><img src="../.gitbook/assets/아이템 등록_서브아이템.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 등록_서브아이템.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -106,7 +106,7 @@ metaLinks:
 | 국가 접근 제한 설정  | <ul><li>C2C 아이템의 국가별 접근 제한 정책을 설정</li><li><p>제한 국가 접근 옵션 선택</p><ul><li>제한 없음</li><li>화이트리스트 (<code>policies.whitelist</code>)</li><li>블랙리스트 (<code>policies.blacklist</code>)</li><li>단, 화이트리스트와 블랙리스트는 <strong>동시에 적용 불가</strong></li></ul></li></ul>                                                                                                                                                                      |
 | 최소 가격 (USDt) | <ul><li><p>C2C 아이템의 최소 판매가를 제한하는 정책</p><ul><li>설정된 최소 가격보다 낮은 가격으로 C2C판매 등록이 불가</li></ul></li><li><code>policies.minPrice</code></li></ul>                                                                                                                                                                                                                                                                                  |
 
-<figure><img src="../.gitbook/assets/아이템 등록_C2C.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 등록_C2C.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -128,7 +128,7 @@ metaLinks:
 * **템플릿 다운로드** 버튼을 선택하여 아이템 벌크 등록용 **CSV 템플릿 파일**을 다운로드합니다.
 * 템플릿에는 아이템 등록에 필요한 기본 컬럼이 포함되어 있습니다.
 
-<figure><img src="../.gitbook/assets/아이템 관리_템플릿.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 관리_템플릿.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -140,7 +140,7 @@ metaLinks:
 
 ⚠️ 필수 항목이 누락되거나 형식이 맞지 않을 경우 업로드가 실패할 수 있습니다.
 
-<figure><img src="../.gitbook/assets/아이템 관리_csv 템플릿.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 관리_csv 템플릿.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -154,7 +154,7 @@ metaLinks:
 * CSV 업로드는 **신규 아이템 또는 기존 등록 아이템 정보 수정** 용도로 사용됩니다.
 * CSV 업로드 등록 전, **소량 테스트 업로드**를 권장합니다.
 
-<figure><img src="../.gitbook/assets/아이템 관리_csv 업로드.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 관리_csv 업로드.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -175,7 +175,7 @@ NEXT Market Console에서는 아이템 수정을 위해 **개별 수정**과 **�
 * **수정하기** 버튼 클릭
 * 아이템 정보 변경 후 저장
 
-<figure><img src="../.gitbook/assets/아이템 관리_수정.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 관리_수정.png" alt=""><figcaption></figcaption></figure>
 
 #### 벌크 수정
 
@@ -186,7 +186,7 @@ NEXT Market Console에서는 아이템 수정을 위해 **개별 수정**과 **�
 * 수정이 완료된 CSV 파일 업로드
 * 업로드 완료 후 수정 결과 확인
 
-<figure><img src="../.gitbook/assets/아이템 관리_csv 다운로드.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 관리_csv 다운로드.png" alt=""><figcaption></figcaption></figure>
 
 ### ⚠️  수정 시 유의사항
 

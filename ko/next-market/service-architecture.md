@@ -9,7 +9,7 @@ metaLinks:
 
 ## 도식
 
-<figure><img src="../.gitbook/assets/NEXT Market_서비스구조 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NEXT Market_서비스구조 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## 설명
 

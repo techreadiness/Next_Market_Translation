@@ -11,7 +11,7 @@ metaLinks:
 C2C 아이템의 카테고리 정보를 사전에 등록한 뒤, C2C 판매 등록 시 해당 카테고리를 선택하여 사용할 수 있습니다. \
 카테고리 설정 시 Marketplace의 필터 영역에 반영되며, 카테고리별로 아이템이 노출됩니다.
 
-<figure><img src="../.gitbook/assets/프리셋.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/프리셋.png" alt=""><figcaption></figcaption></figure>
 
 ## C2C 프리셋 등록
 
@@ -33,7 +33,7 @@ C2C 아이템 카테고리 설정은 최대 2 Depth까지 설정 가능합니다
 
 * 프리셋 생성 버튼을 선택하여 등록 화면으로 이동합니다.
 
-<figure><img src="../.gitbook/assets/프리셋_등록.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/프리셋_등록.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -48,7 +48,7 @@ C2C 아이템 카테고리 설정은 최대 2 Depth까지 설정 가능합니다
 | 색상         | <ul><li>카테고리에 표시될 색상을 설정</li><li>설정 가능 색상: 파란색, 노란색, 빨간색, 초록색</li><li>없음 선택 시 기본색상이 적용</li></ul><p>⚠️ 색상 설정은 등급 (희귀도) 카테고리에만 등록하는 것을 권장합니다.</p><ul><li><p>Ex) </p><ul><li>전설: 노란색</li><li>희귀: 파란색</li><li>고급: 초록색</li></ul></li></ul> |
 | 프리셋명 (다국어) | <ul><li>다국어 입력 지원: en, ko, ja, th, zh</li><li><p>거래소 내 아이템 상세 화면에 표시되는 값</p><ul><li>마켓에서 제공하는 언어에 대해 반드시 등록 필요</li></ul></li></ul>                                                                                                    |
 
-<figure><img src="../.gitbook/assets/프리셋_기본정보.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/프리셋_기본정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -56,7 +56,7 @@ C2C 아이템 카테고리 설정은 최대 2 Depth까지 설정 가능합니다
 
 프리셋에 포함될 아이템 (SKU) 설정은 프리셋 최초 등록 시가 아닌, 등록 완료 후 수정 기능을 통해 등록 가능합니다.
 
-<figure><img src="../.gitbook/assets/프리셋_아이템.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/프리셋_아이템.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -70,7 +70,7 @@ C2C 아이템 카테고리 설정은 최대 2 Depth까지 설정 가능합니다
 * **수정하기** 버튼 클릭
 * 프리셋 정보 변경 후 저장
 
-<figure><img src="../.gitbook/assets/프리셋_수정.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/프리셋_수정.png" alt=""><figcaption></figcaption></figure>
 
 ### ⚠️  수정 시 유의사항
 

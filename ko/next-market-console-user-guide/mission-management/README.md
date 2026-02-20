@@ -37,7 +37,7 @@ metaLinks:
 
 * 미션 생성 버튼 선택하여 등록 화면으로 이동합니다.
 
-<figure><img src="../../.gitbook/assets/미션 관리_생성.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/미션 관리_생성.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -52,7 +52,7 @@ metaLinks:
 | 라운드      | <ul><li>미션의 반복 회차 설정</li><li>회차를 지정하지 않으면 무한반복 미션으로 정의됩니다.</li><li>회차를 지정하면 미션 타입에 해당하는 조건이 형식에 맞게 초기화되거나 달성 기준이 변경됩니다.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Realm 코드 | <ul><li><p>Realm (게임 서버) 단위로 미션 수행을 진행 하는 경우 설정</p><ul><li>특정 서버 또는 환경별 미션 운영이 필요한 경우에만 사용됩니다.</li></ul></li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-<figure><img src="../../.gitbook/assets/미션 관리_기본정보.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/미션 관리_기본정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -65,7 +65,7 @@ metaLinks:
 | 미션명   | <ul><li>다국어 입력 지원: en, ko, ja, th, zh</li><li>미션 &#x26; 리워드 페이지 내 미션명으로 노출되는 값</li><li>마켓에서 제공하는 언어에 대해 반드시 등록 필요</li></ul>   |
 | 미션 설명 | <ul><li>다국어 입력 지원: en, ko, ja, th, zh</li><li>미션 &#x26; 리워드 페이지 내 미션 설명으로 노출되는 값</li><li>마켓에서 제공하는 언어에 대해 반드시 등록 필요</li></ul> |
 
-<figure><img src="../../.gitbook/assets/미션 관리_다국어 정보.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/미션 관리_다국어 정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -107,7 +107,7 @@ metaLinks:
 
 ⚠️ VIDEO 형식 업로드는 기능상 선택은 가능하나, **공식적으로 지원하지 않으므로 IMAGE 형식으로만 등록해 주시기 바랍니다.**
 
-<figure><img src="../../.gitbook/assets/미션 관리_미디어 정보.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/미션 관리_미디어 정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -115,7 +115,7 @@ metaLinks:
 
 * 환경별 미션 \[참여하기] 버튼 선택 시 이동할 URL을 입력합니다.
 
-<figure><img src="../../.gitbook/assets/미션 관리_디바이스 링크.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/미션 관리_디바이스 링크.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -130,7 +130,7 @@ metaLinks:
 
     ⚠️ 화이트리스트와 블랙리스트는 **동시에 적용 불가 하며, 대상국가는** ISO 3166-1 alpha-2의 2자리 대문자로 표현하는 국가 코드의 목록을 입력해야 합니다.
 
-<figure><img src="../../.gitbook/assets/미션 관리_국가 제어.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/미션 관리_국가 제어.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -144,7 +144,7 @@ metaLinks:
 * **수정하기** 버튼 클릭
 * 미션 정보 변경 후 저장
 
-<figure><img src="../../.gitbook/assets/미션 관리_수정.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/미션 관리_수정.png" alt=""><figcaption></figcaption></figure>
 
 ### ⚠️  수정 시 유의사항
 
@@ -168,7 +168,7 @@ metaLinks:
 | 로고 이미지      | <ul><li><p>지원형식</p><ul><li>IMAGE: JPG, PNG, WebP</li></ul></li><li>이미지 사이즈: 478x100px</li></ul><p>⚠️ 유의사항</p><ul><li>세로 높이 100px은 고정되며, 가로 길이는 최대 478px 이내로 제작 가능합니다.</li><li>이미지 좌우에 여백이 없도록 제작해 주시기 바랍니다.</li></ul>                                                                                                                                                                  |
 | 미션 & 리워드 설명 | <ul><li>다국어 입력 지원: en, ko, ja, th, zh</li><li>마켓에서 제공하는 언어에 대해 반드시 등록 필요</li></ul>                                                                                                                                                                                                                                                                                                     |
 
-<figure><img src="../../.gitbook/assets/배너.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/배너.png" alt=""><figcaption></figcaption></figure>
 
 ### 미션 보상
 

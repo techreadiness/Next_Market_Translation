@@ -5,11 +5,11 @@ metaLinks:
       https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/next-market/onboarding-process
 ---
 
-# 온보딩  프로세스
+# 온보딩 프로세스
 
 ### 도식
 
-<figure><img src="../.gitbook/assets/NEXT Market_온보딩 프로세스.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NEXT Market_온보딩 프로세스.png" alt=""><figcaption></figcaption></figure>
 
 ### 설명
 

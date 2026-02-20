@@ -33,7 +33,7 @@ C2C 아이템 능력 등록은 **개별 등록 방식**을 지원합니다.\
 
 * 능력 등록 버튼을 선택하여 아이템 능력 등록 화면으로 이동합니다.
 
-<figure><img src="../.gitbook/assets/아이템 능력 관리_등록.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 능력 관리_등록.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -49,7 +49,7 @@ C2C 아이템 능력 등록은 **개별 등록 방식**을 지원합니다.\
 | 표시 형식 | <ul><li>능력 값을 <strong>어떤 형태로 사용자에게 보여줄지</strong> 설정</li><li><p>표시 형식 선택</p><ul><li>수치 그대로 (<code>NONE</code>): 입력 수치 그대로 노출</li><li>100% (<code>PPERCENTAGE</code>)</li><li>+100 (<code>NUMERIC</code>)</li><li>100Lv (<code>LEVEL</code>)</li></ul></li><li>아이템 능력 설정 등록 API의 <code>keys.unitType</code> 값으로 전달</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | 색상    | <ul><li>능력 값을 표시할 색상을 설정</li><li><p>지정 가능한 색상</p><ul><li><p>노란색, 초록색, 파란색, 자홍색, 주황색, 빨간색, 회색, 색상 없음</p><ul><li>색상 없음의 경우 기본 색상으로 노출됨</li></ul></li></ul></li><li>아이템 능력 설정 등록 API의 <code>keys.color</code> 값으로 전달</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
-<figure><img src="../.gitbook/assets/아이템 능력 관리_기본정보.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 능력 관리_기본정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -71,7 +71,7 @@ C2C 아이템 능력 등록은 **개별 등록 방식**을 지원합니다.\
 * **템플릿 다운로드** 버튼을 선택하여 아이템 능력 벌크 등록용 **CSV 템플릿 파일**을 다운로드합니다.
 * 템플릿에는 아이템 능력 등록에 필요한 기본 컬럼이 포함되어 있습니다.
 
-<figure><img src="../.gitbook/assets/아이템 능력 관리_템플릿.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 능력 관리_템플릿.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -82,7 +82,7 @@ C2C 아이템 능력 등록은 **개별 등록 방식**을 지원합니다.\
 
 ⚠️ 필수 항목이 누락되거나 형식이 맞지 않을 경우 업로드가 실패할 수 있습니다.
 
-<figure><img src="../.gitbook/assets/아이템 능력 관리_템플릿 엑셀.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 능력 관리_템플릿 엑셀.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
@@ -96,7 +96,7 @@ C2C 아이템 능력 등록은 **개별 등록 방식**을 지원합니다.\
 * CSV 업로드는 **신규 아이템 능력 또는 기존 등록 정보 수정** 용도로 사용됩니다.
 * CSV 업로드 등록 전, **소량 테스트 업로드**를 권장합니다.
 
-<figure><img src="../.gitbook/assets/아이템 능력 관리_CSV 업로드.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 능력 관리_CSV 업로드.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
@@ -116,7 +116,7 @@ C2C 아이템 능력 등록은 **개별 등록 방식**을 지원합니다.\
 * **수정하기** 버튼 클릭
 * 아이템 정보 변경 후 저장
 
-<figure><img src="../.gitbook/assets/아이템 능력 관리_수정.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/아이템 능력 관리_수정.png" alt=""><figcaption></figcaption></figure>
 
 #### 벌크 수정
 
@@ -127,7 +127,7 @@ C2C 아이템 능력 등록은 **개별 등록 방식**을 지원합니다.\
 * 수정이 완료된 CSV 파일 업로드
 * 업로드 완료 후 수정 결과 확인
 
-<figure><img src="../.gitbook/assets/C2C 아이템 능력 관리_업로드.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/C2C 아이템 능력 관리_업로드.png" alt=""><figcaption></figcaption></figure>
 
 ### ⚠️  수정 시 유의사항
 
