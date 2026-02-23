@@ -1,8 +1,8 @@
 # Table of contents
 
-* [en](README.md)
+* [NEXT Market](README.md)
   * [Table of contents](en/summary.md)
-  * [faq](en/faq.md)
+  * [FAQ](en/faq.md)
   * [metaLinks: alternates: - https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/api-usage-guide](en/api-usage-guide/README.md)
     * [account](en/api-usage-guide/account.md)
     * [api-list](en/api-usage-guide/api-list.md)
@@ -34,7 +34,7 @@
       * [mission-type-setup](en/next-market-console-user-guide/mission-management/mission-type-setup.md)
   * [next-market](en/next-market/README.md)
     * [next-market-url](en/next-market/next-market-url.md)
-    * [metaLinks: alternates: - >- https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/next-market/onboarding-pr](en/next-market/onboarding-process.md)
+    * [Onboarding Process](en/next-market/onboarding-process.md)
     * [Service Structure](en/next-market/service-architecture.md)
 * [NEXT Market](ko/README.md)
   * [Table of contents](ko/summary.md)
