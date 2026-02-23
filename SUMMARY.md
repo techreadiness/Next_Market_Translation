@@ -16,7 +16,7 @@
     * [Settlement](en/api-usage-guide/settlement.md)
   * [getting-started](en/getting-started/README.md)
     * [metaLinks: alternates: - >- https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/getting-started/firewall-](en/getting-started/firewall-configuration.md)
-    * [metaLinks: alternates: - https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/getting-started/glossary](en/getting-started/glossary.md)
+    * [Glossary](en/getting-started/glossary.md)
     * [metaLinks: alternates: - >- https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/getting-started/in-game-w](en/getting-started/in-game-webview-guide.md)
     * [instant-item-purchase](en/getting-started/instant-item-purchase.md)
     * [metaLinks: alternates: - >- https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/getting-started/maintenan](en/getting-started/maintenance-handling.md)
