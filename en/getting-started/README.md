@@ -4,14 +4,13 @@ metaLinks:
     - https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/getting-started
 ---
 
-
 # Getting Started
 
 * [용어 사전](glossary.md)
-* [방화벽 해제 설정](firewall-configuration.md)
-* [아이템 판매 연동 절차](item-sales-integration-flow/)
-* [결제 및 정산 서비스](payment-and-settlement-services.md)
-* [인게임 Webview 제공](in-game-webview-guide.md)
-* [Prod 실결제 테스트](production-payment-testing.md)
-* [아이템 바로 구매하기](instant-item-purchase.md)
-* [점검 상황 대응 가이드](maintenance-handling.md)
+* [Firewall Exception Settings](firewall-configuration.md)
+* [Item Sales Integration Flow](item-sales-integration-flow/)
+* [Payment and Settlement](payment-and-settlement-services.md)
+* [In-Game Webview Provision](in-game-webview-guide.md)
+* [Live Payment Test](production-payment-testing.md)
+* [Instant Item Purchase](instant-item-purchase.md)
+* [Workaround for Market Testing](maintenance-handling.md)
