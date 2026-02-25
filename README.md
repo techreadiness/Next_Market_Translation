@@ -4,22 +4,22 @@ icon: cart-shopping
 
 # NEXT Market
 
-### icon: cart-shopping metaLinks: alternates: - https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/
+
 
 ## NEXT Market
-
-### NEXT Market
 
 * A global cross-border game marketplace providing game developers and Web2 gamers with a new experience of a free economy.
 * Gamers can easily trade items in-game through 1:1 account linking with games, while game developers can monetize using a global stablecoin-based system.
 
-\## LINE NEXT
+<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+### LINE NEXT
 
 * Aims to build a Web3 digital asset ecosystem by providing NEXT Market, Mini Dapps, and LINE/Web-based Web3 Wallet services.
 * Secured 65 million active wallets and 1.6 million purchasing wallets in 8 months → Owns Asia's largest wallet network.
 * Formed a strategic partnership with Tether for an Asian digital dollar gateway.
 
-\## NEXT Market Key Features
+### NEXT Market Key Features
 
 #### 1. Game-Embedded Marketplace
 
