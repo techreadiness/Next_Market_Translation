@@ -2,11 +2,11 @@
 icon: cart-shopping
 ---
 
-# NEXT Market
+# Next Market
 
 
 
-## NEXT Market
+## Next Market
 
 * A global cross-border game marketplace providing game developers and Web2 gamers with a new experience of a free economy.
 * Gamers can easily trade items in-game through 1:1 account linking with games, while game developers can monetize using a global stablecoin-based system.
@@ -19,7 +19,7 @@ icon: cart-shopping
 * Secured 65 million active wallets and 1.6 million purchasing wallets in 8 months → Owns Asia's largest wallet network.
 * Formed a strategic partnership with Tether for an Asian digital dollar gateway.
 
-### NEXT Market Key Features
+### Next Market Key Features
 
 #### 1. Game-Embedded Marketplace
 
