@@ -6,7 +6,7 @@
   * [API Usage Guide](en/api-usage-guide/README.md)
     * [API Version Information](en/api-usage-guide/api-version-information.md)
     * [API List](en/api-usage-guide/api-list.md)
-    * [Authenticaltion and Security](en/api-usage-guide/authentication-security.md)
+    * [Authentication and Security](en/api-usage-guide/authentication-security.md)
     * [Item](en/api-usage-guide/item.md)
     * [Section](en/api-usage-guide/section.md)
     * [Sale](en/api-usage-guide/sale.md)
