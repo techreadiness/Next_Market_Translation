@@ -6,7 +6,7 @@ metaLinks:
 
 # Getting Started
 
-* [용어 사전](glossary.md)
+* [Glossary](glossary.md)
 * [Firewall Exception Settings](firewall-configuration.md)
 * [Item Sales Integration Flow](item-sales-integration-flow/)
 * [Payment and Settlement](payment-and-settlement-services.md)
