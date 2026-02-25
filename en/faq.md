@@ -4,8 +4,7 @@ metaLinks:
     - https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/faq
 ---
 
-
-# Frequently Asked Questions
+# FAQ
 
 ## API Credentials
 
@@ -13,9 +12,11 @@ metaLinks:
 
 <summary>How can I obtain API Credentials?</summary>
 
-After receiving corporate and store information and registering with NEXT Market, API Credentials will be issued. Once issued, they will be sent to each responsible party&#x27;s email address.
+After receiving corporate and store information and registering with NEXT Market, API Credentials will be issued. Once issued, they will be sent to each responsible party's email address.
 
-</details>## Firewall Exemption Procedure
+</details>
+
+## Firewall Exemption Procedure
 
 <details>
 
@@ -57,11 +58,9 @@ curl --user &quot;{apiKey}:{credential}&quot; \
 
 <details>
 
-<summary>Can I use a custom port number on the developer&#x27;s server domain?</summary>
+<summary>Can I use a custom port number on the developer's server domain?</summary>
 
-Yes, it is possible.
-However, in the Preview environment, if you use **ports 80 or 443**, **NEXT Market → Game Outbound ACL configuration is unnecessary**.
-Therefore, if you want to test quickly, we recommend using port 80 or 443.
+Yes, it is possible. However, in the Preview environment, if you use **ports 80 or 443**, **NEXT Market → Game Outbound ACL configuration is unnecessary**. Therefore, if you want to test quickly, we recommend using port 80 or 443.
 
 </details>
 
@@ -71,7 +70,9 @@ Therefore, if you want to test quickly, we recommend using port 80 or 443.
 
 This is because access is denied due to incomplete ACL configuration.
 
-</details>## API
+</details>
+
+## API
 
 <details>
 
@@ -106,7 +107,7 @@ Error responses have the following JSON structure:
 
 <details>
 
-<summary>Can authentication headers be added to the NEXT Market -&gt; Game callback?</summary>
+<summary>Can authentication headers be added to the NEXT Market -> Game callback?</summary>
 
 Yes, it is possible. Custom implementations such as API Key/Secret or token-based methods can be applied.
 
@@ -118,7 +119,9 @@ Yes, it is possible. Custom implementations such as API Key/Secret or token-base
 
 Yes, they must be configured independently.
 
-</details>## One-time authentication token for store authentication
+</details>
+
+## One-time authentication token for store authentication
 
 <details>
 
@@ -154,7 +157,7 @@ How to set redirectPath
 
 * B2C page: /shop
 * C2C page: /marketplace
-* Mission &amp; Rewards page: /mission
+* Mission & Rewards page: /mission
 
 However, for C2C sales registration, the set redirectPath is ignored, and the user is directed directly to the C2C sales registration page.
 
@@ -166,7 +169,7 @@ Additionally, except for C2C sales registration, query parameters can be specifi
 
 <summary>What are examples of store navigation links?</summary>
 
-Example link: https://{domain}/auth?token=xxxx\&amp;redirectPath;=/xxxx/xxx?param=key 
+Example link: https://{domain}/auth?token=xxxx\&amp;redirectPath;=/xxxx/xxx?param=key
 
 </details>
 
@@ -176,7 +179,7 @@ Example link: https://{domain}/auth?token=xxxx\&amp;redirectPath;=/xxxx/xxx?para
 
 The token expires immediately after use, while the session persists separately.
 
-Sessions are renewed hourly based on user activity and can be extended up to 180 days, though this may vary operationally. 
+Sessions are renewed hourly based on user activity and can be extended up to 180 days, though this may vary operationally.
 
 </details>
 
@@ -198,7 +201,9 @@ The region must be provided as the agreed-upon country code ([https://en.wikiped
 
 You can set any value as long as it is a string that can be disclosed to the logged-in user.
 
-</details>## Game Account Status Inquiry
+</details>
+
+## Game Account Status Inquiry
 
 <details>
 
@@ -208,7 +213,9 @@ The path following the endpoint is fixed.
 
 However, if setting the root path to `/next-market` is difficult, you can configure a subpath using the format `https://{domain}/{subpath}/next-market/…`. Share this subpath, including the `subpath`, with the development team for configuration.
 
-</details>## Items
+</details>
+
+## Items
 
 <details>
 
@@ -226,15 +233,13 @@ When using special characters, the underscore `_` separator cannot be used; hyph
 
 name, description, subItemList (optional), policies.whiteList (optional), and policies.blacklist (optional) must be registered.
 
-
-
 </details>
 
 <details>
 
 <summary>Is SKU registration required for both B2C and C2C?</summary>
 
-Yes, that&#x27;s correct. SKU registration is mandatory for items requiring shipping and transaction processing. (Register via API)
+Yes, that's correct. SKU registration is mandatory for items requiring shipping and transaction processing. (Register via API)
 
 </details>
 
@@ -242,7 +247,7 @@ Yes, that&#x27;s correct. SKU registration is mandatory for items requiring ship
 
 <summary>Do package sub-items also need to be registered?</summary>
 
-Yes, that&#x27;s correct. All sub-items must be registered individually for package screen display and transmission processing.
+Yes, that's correct. All sub-items must be registered individually for package screen display and transmission processing.
 
 </details>
 
@@ -258,10 +263,9 @@ It is used solely for display purposes, referencing the registered individual SK
 
 <summary>How do I create line breaks in the item description?</summary>
 
-You can apply line breaks using the `
-` or `<br>
+You can apply line breaks using the or \`<br>
 
-` tags.
+\` tags.
 
 </details>
 
@@ -289,7 +293,9 @@ Items must use a 72x72px size, including the background.
 
 This requires discussion. If you need assistance, LINE NEXT can handle the registration on your behalf if you provide the parameter values in TSV or JSON format.
 
-</details>## Sales
+</details>
+
+## Sales
 
 <details>
 
@@ -331,8 +337,8 @@ No. If changes to price or composition are needed, a new sales registration must
 
 <summary>How do limitPurchaseCount, periodicType, and resetAt work?</summary>
 
-* limitPurchaseCount: 1 &amp; periodicType: null &amp; resetAt: null:  First purchase allowed per account
-* limitPurchaseCount: 1 &amp; periodicType: is not null &amp; resetAt: is not null:  One purchase allowed per period, with purchase count reset at period start
+* limitPurchaseCount: 1 & periodicType: null & resetAt: null: First purchase allowed per account
+* limitPurchaseCount: 1 & periodicType: is not null & resetAt: is not null: One purchase allowed per period, with purchase count reset at period start
 * limitPurchaseCount: null: No purchase limit
 
 </details>
@@ -367,7 +373,9 @@ It is displayed based on the subItemList.amount value.
 
 A list of sections is required to display B2C products. If there is only one section, a single column is used. If there are two or more sections, the top tabs and anchors on the webshop will function.
 
-</details>## Payment
+</details>
+
+## Payment
 
 <details>
 
@@ -419,7 +427,9 @@ Minimum payment amount per currency
 
 The minimum price for B2C products must be set above the minimum payment amount per currency. Therefore, consultation with LINE NEXT is required before finalizing prices.
 
-</details>## Shipping
+</details>
+
+## Shipping
 
 <details>
 
@@ -455,11 +465,13 @@ Delays may occur due to factors like simultaneous purchase volume, but a reproce
 
 <details>
 
-<summary>Regarding delivery history inquiries, if a delivery isn&#x27;t received, does acquiredAt show as 0?</summary>
+<summary>Regarding delivery history inquiries, if a delivery isn't received, does acquiredAt show as 0?</summary>
 
 acquiredAt signifies the delivery completion time, so it always has a value. If a delivery failure occurs, the query result will show no value. In such cases, it must be judged as an abnormal delivery.
 
-</details>## Refunds
+</details>
+
+## Refunds
 
 <details>
 
@@ -473,7 +485,7 @@ Refunds follow this sequence: User request → Developer retrieves the item → 
 
 <summary>How are refund notices applied?</summary>
 
-Guidance text can only be adjusted by country in the web shop. In-game, the &quot;no refunds&quot; policy text is used for consistency.
+Guidance text can only be adjusted by country in the web shop. In-game, the "no refunds" policy text is used for consistency.
 
 </details>
 
@@ -487,9 +499,11 @@ Yes, they are possible. However, since PG company fees are incurred for payments
   * Testing is only possible with international credit card payments
   * $0.3 + VAT incurred per payment/cancellation
     * $0.66 incurred when canceling after payment
-  * Contractual fees will be deducted from the following month&#x27;s settlement → Shared between the developer and NEXT
+  * Contractual fees will be deducted from the following month's settlement → Shared between the developer and NEXT
 
-</details>## Settlement
+</details>
+
+## Settlement
 
 <details>
 
@@ -498,11 +512,13 @@ Yes, they are possible. However, since PG company fees are incurred for payments
 Sales settlement targets are aggregated monthly. Here is the timeline:
 
 * Sales aggregation and verification: 3 business days into the following month
-* Biz Report provision: 4th ~ 5th business day into the following month
+* Biz Report provision: 4th \~ 5th business day into the following month
 * Settlement instruction: 20th of the following month
 * Settlement payment: 21st of the following month
 
-</details>## Missions &amp; Rewards
+</details>
+
+## Missions & Rewards
 
 <details>
 
@@ -551,7 +567,9 @@ It is displayed in PC environments and is hidden only in mobile/pad environments
   * Example: Round 1: Kill 20 enemies (0/20) → Round 2: Kill 40 enemies (0/40)
 * CHALLENGE: Set ongoing missions as a collection. All designated missions must be completed together to receive rewards.
 
-</details>## Web Shop
+</details>
+
+## Web Shop
 
 <details>
 
@@ -559,11 +577,11 @@ It is displayed in PC environments and is hidden only in mobile/pad environments
 
 The priority order is as follows:
 
-* Select the languages to support in the web shop from the 5 languages provided by NEXT Market, and set the store&#x27;s default language from among them.
+* Select the languages to support in the web shop from the 5 languages provided by NEXT Market, and set the store's default language from among them.
   * Available languages: English, Korean, Japanese, Chinese (Traditional), Thai
 * Non-logged-in users: Store default language
-* Logged-in users: User&#x27;s set language or language set in the footer
-  * However, if the user&#x27;s browser/OS language is not one provided by NEXT Market, the store default language is displayed
+* Logged-in users: User's set language or language set in the footer
+  * However, if the user's browser/OS language is not one provided by NEXT Market, the store default language is displayed
 
 </details>
 
@@ -573,11 +591,13 @@ The priority order is as follows:
 
 Preview and Prod are completely independent environments, so authentication will not work. The Prod web shop has a separate domain.
 
-</details>## Webview
+</details>
+
+## Webview
 
 <details>
 
-<summary> How can NEXT Market be provided as an in-game Webview?</summary>
+<summary>How can NEXT Market be provided as an in-game Webview?</summary>
 
 If you plan to provide NEXT Market via an in-game Webview, prior notification to LINE NEXT is required.
 
@@ -585,7 +605,9 @@ Please refer to the following guide document for details. ([가이드](https://n
 
 )
 
-</details>## Testing
+</details>
+
+## Testing
 
 <details>
 
@@ -600,9 +622,10 @@ The Preview Store is a page that may be visible to general users. Therefore, car
 <summary>What should be verified during Preview testing?</summary>
 
 We recommend focusing on:
-- Navigation flow when moving from the game to the web shop (via Webview or external browser)
-- Login functionality
-- Item delivery after purchasing goods
+
+* Navigation flow when moving from the game to the web shop (via Webview or external browser)
+* Login functionality
+* Item delivery after purchasing goods
 
 To address any issues discovered during testing, please complete testing for the above items at least 3 business days before the web shop opens.
 
@@ -626,7 +649,9 @@ For detailed information, please refer to the following guide document: ([가이
 
 You must register the product again and then proceed with testing. However, please note that in unavoidable cases, testing support may be possible after consultation with LINE NEXT.
 
-</details>## Policy
+</details>
+
+## Policy
 
 <details>
 
