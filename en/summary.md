@@ -1,6 +1,6 @@
 # Table of contents
 
-* [NEXT Market](./)
+* [About Next Market](./)
   * [Service Structure](next-market/service-architecture.md)
   * [Onboarding Process](next-market/onboarding-process.md)
   * [Next Market Url](next-market/next-market-url.md)
@@ -26,7 +26,7 @@
   * [Account](api-usage-guide/account.md)
   * [Mission](api-usage-guide/mission.md)
   * [Error Response](api-usage-guide/error-response.md)
-* [NEXT Market Console User Guide](next-market-console-user-guide/)
+* [Next Market Console User Guide](next-market-console-user-guide/)
   * [B2C Product Management](next-market-console-user-guide/b2c-product-management.md)
   * [Item Management](next-market-console-user-guide/item-management.md)
   * [Mission Management](next-market-console-user-guide/mission-management/)
