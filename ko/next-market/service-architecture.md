@@ -2,7 +2,7 @@
 metaLinks:
   alternates:
     - >-
-      https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/next-market/service-architecture
+      https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/about-next-market/service-architecture
 ---
 
 # 서비스 구조

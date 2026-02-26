@@ -1,7 +1,8 @@
 ---
 metaLinks:
   alternates:
-    - https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/next-market/next-market-url
+    - >-
+      https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/about-next-market/next-market-url
 ---
 
 # Next Market 주요 URL 안내

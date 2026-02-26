@@ -2,15 +2,18 @@
 metaLinks:
   alternates:
     - >-
-      https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/next-market/service-architecture
+      https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/about-next-market/service-architecture
 ---
 
+# Service Structure
 
-## Service Structure
+### Service Structure
 
-## Diagram
+### Diagram
 
-<figure><img src="../../.gitbook/assets/NEXT Market_서비스구조 (1).png" alt=""><figcaption></figcaption></figure>## Description
+<figure><img src="../../.gitbook/assets/NEXT Market_서비스구조 (1).png" alt=""><figcaption></figcaption></figure>
+
+\## Description
 
 1. A contract between the game developer (or publisher) and LINE NEXT is required to join NEXT Market (Item Web Shop).
 2. LINE NEXT provides the API and technical support for integrating with NEXT Market.

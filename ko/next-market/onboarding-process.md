@@ -2,7 +2,7 @@
 metaLinks:
   alternates:
     - >-
-      https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/next-market/onboarding-process
+      https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/about-next-market/onboarding-process
 ---
 
 # 온보딩 프로세스

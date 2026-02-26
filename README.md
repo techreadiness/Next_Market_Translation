@@ -19,6 +19,8 @@ icon: cart-shopping
 * Secured 65 million active wallets and 1.6 million purchasing wallets in 8 months → Owns Asia's largest wallet network.
 * Formed a strategic partnership with Tether for an Asian digital dollar gateway.
 
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 ### Next Market Key Features
 
 #### 1. Game-Embedded Marketplace
@@ -59,6 +61,6 @@ Provides a custom webshop environment supporting global local payments and stabl
 * Provision of sales statistics and analytics dashboard
 * Provision of user retention insights
 
-\## Contact
+### Contact
 
 nextmarket\_bd@linecorp.com
