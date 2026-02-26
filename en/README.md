@@ -25,16 +25,16 @@ metaLinks:
 
 Gamers can access the marketplace directly within games using their game accounts without separate logins and trade items in-game.
 
-### 2. Multi-Currency Webshop
+### 2. Multi-Currency Web Shop
 
-Provides a custom webshop environment supporting global local payments and stablecoin (USDt) settlements.
+Provides a custom web shop environment supporting global local payments and stablecoin (USDt) settlements.
 
 ### 3. Cross-Border Marketplace
 
 * Gamers can trade B2C/C2C items using only their in-game accounts.
 * Buyers
-  * Pay via local payment or stablecoin
-  * Receive items in-game mailbox without opening a wallet
+  * Pay via local payment methods or stablecoins
+  * Receive items directly in their in-game mailbox without opening a wallet
 * Seller
   * Instant settlement in stablecoin with zero fees
   * Settlement possible after logging in with Social ID and OKX/Bitget Wallet
@@ -50,7 +50,7 @@ Provides a custom webshop environment supporting global local payments and stabl
 
 ### 1. Marketing Support
 
-* Provision of game marketing reward grants (varies based on onboarding conditions)
+* Provision of game marketing reward funds (varies based on onboarding conditions)
 * Featured exposure of game rewards within LINE&#x27;s Dapp Portal
 * Support for message distribution via LINE NEXT&#x27;s official OA
 

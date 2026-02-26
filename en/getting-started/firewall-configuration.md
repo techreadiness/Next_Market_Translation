@@ -22,6 +22,6 @@ NEXT Market and the game require bidirectional API communication. NEXT Market re
 * <mark style="color:blue;">**Information Game Side Must Provide to NEXT Market (Provided per Preview/Production Environment)**</mark>
   * Server domain or IP and port information (Destination) that NEXT Market will call to the game side
   * Source IP (Source) used when the game side calls NEXT Market
-* Information requiring configuration on the game side (if network configuration is needed)
+* Information requiring configuration on the game side (if network settings are needed)
   * Source IP used by NEXT Market when calling the game (Source)
   * API Endpoint of NEXT Market to be called by the game side (Destination)

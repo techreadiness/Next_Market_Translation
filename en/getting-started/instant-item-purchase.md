@@ -24,7 +24,7 @@ This feature is suitable for consumable items essential to game progression.
 
 ### Delivery Method by Environment
 
-The Item Direct Purchase feature provides different payment screen delivery methods depending on the game execution environment.
+The Item Direct Purchase feature presents the payment screen differently depending on the game execution environment.
 
 <table><thead><tr><th width="175.646728515625">Environment</th><th>Method</th></tr></thead><tbody><tr><td>PC Client</td><td>Provided as a payment window pop-up</td></tr><tr><td>Web-based Game</td><td>Provided as a page transition within a web browser</td></tr><tr><td>Mobile Native App</td><td>Not applicable</td></tr></tbody></table>## User Flow
 
@@ -38,13 +38,13 @@ When the Direct Item Purchase feature is applied, payment proceeds via the follo
   * Minimizes user movement compared to existing flow
   * Reduces additional setup effort from an operational perspective (e.g., API configuration)
 
-### 2. Existing Flow (When Instant Item Purchase is Not Applied)
+### 2. Existing Flow (Without Instant Item Purchase)
 
-When the Instant Item Purchase feature is not applied, NEXT Market can be used with the following flow.
+When the Instant Item Purchase feature is not applied, NEXT Market can be used via the following flow.
 
-<table><thead><tr><th width="193.2725830078125">Case</th><th>Flow</th></tr></thead><tbody><tr><td>Go to NEXT Market</td><td><ul><li>Game Play &gt; Go to NEXT Market &gt; Browse Item List &gt; Select Item &gt; Item Details Screen &gt; Select Purchase Item and Quantity &gt; Proceed to Payment &gt; Return to NEXT Market after Payment Completion</li><li>Game Play &gt; Go to NEXT Market &gt; Browse Item List &gt; Select Item and Quantity to Purchase &gt; Proceed to Payment &gt; Return to NEXT Market after Payment Completion</li></ul></td></tr><tr><td>Navigate to Item Details Screen</td><td>Game Play &gt; Select Purchase Item &gt; NEXT Market Item Details Screen &gt; Select Purchase Item and Quantity &gt; Proceed to Payment &gt; Return to NEXT Market After Payment Completion</td></tr></tbody></table>⚠️ Important Notes When Providing the Item Detail Screen Navigation Path
+<table><thead><tr><th width="193.2725830078125">Case</th><th>Flow</th></tr></thead><tbody><tr><td>Go to NEXT Market</td><td><ul><li>Game Play &gt; Go to NEXT Market &gt; Browse Item List &gt; Select Item &gt; Item Details Screen &gt; Select Purchase Item &amp; Quantity &gt; Proceed to Payment &gt; Return to NEXT Market after Payment Completion</li><li>Game Play &gt; Go to NEXT Market &gt; Browse Item List &gt; Select Item(s) and Quantity &gt; Proceed to Payment &gt; Return to NEXT Market after Payment Completion</li></ul></td></tr><tr><td>Navigate to Item Details Screen</td><td>Game Play &gt; Select Purchase Item &gt; NEXT Market Item Details Screen &gt; Select Purchase Item and Quantity &gt; Proceed to Payment &gt; Return to NEXT Market after Payment Completion</td></tr></tbody></table>⚠️ Important Notes When Providing the Item Detail Screen Navigation Path
 
-When calling the API to request a one-time token for store authentication, the redirectPath must be set to the format below for the item detail screen navigation feature to activate.
+When calling the API to request a one-time token for store authentication, the redirectPath must be set to the format below to activate the item detail screen navigation feature.
 
 ```
 /shop/sales/{sale_id}
@@ -54,10 +54,10 @@ When calling the API to request a one-time token for store authentication, the r
 
 | Category        | Direct Item Purchase | Existing Path (Go to NEXT Market) | Existing Path (Go to Item Detail Screen) |
 | --------- | ----------- | ---------------------- | -------------------- |
-| Item Exploration Path | In-game         | NEXT Market            | In-game                  |
+| Item Browsing Path | In-game         | NEXT Market            | In-game                  |
 | User Navigation Steps | Minimized         | Multi-step                    | Multi-step                  |
-| Payment Access     | Immediate          | Via item shop list         | Via item detail screen         |
-| Potential Game Exit | Low             | Relatively high               | Relatively high             |
+| Payment Access     | Immediate          | Via item shop list          | Via item detail screen         |
+| Game Exit Risk    | Low          | Relatively high               | Relatively high             |
 | Operational Setup Effort | Low          | Low                     | Requires setup per product listing     |
 
 ## How to Implement Instant Item Purchase

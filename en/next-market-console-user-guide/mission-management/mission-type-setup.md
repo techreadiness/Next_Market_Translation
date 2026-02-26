@@ -8,18 +8,18 @@ metaLinks:
 
 # Mission Type Setup Guide
 
-A mission&#x27;s operation method and reward distribution structure vary based on the mission type + round (instance) + achievement goal settings.
+The operation method and reward distribution structure of missions vary based on the mission type + round (instance) + achievement goal settings.
 Please select the mission type that best suits your purpose by referring to the examples below.
 
 ## SINGLE - Single Goal Mission
 
 * Rewards are distributed upon achieving the single goal.
-* Depending on whether rounds are set, it can be operated as a one-time mission.
+* Can be operated as a one-time mission depending on whether rounds are set.
 
 | Field | Value  | Example |
 | ----- | ------ | ------- |
 | Mission Type | SINGLE | SINGLE  |
-| Rounds     | Not Set    | 1       |
+| Rounds    | Not Set    | 1       |
 | Achievement Goal | Number of Achievements  | 1       |
 
 ### Operation Method
@@ -60,7 +60,7 @@ Please select the mission type that best suits your purpose by referring to the 
 
 ⚠️ **Achievement progress is NOT reset** when changing rounds.
 
-| Round | Goal | Achieved | Status        |
+| Round    | Goal        | Achieved      | Status        |
 | --- | -- | -- | --------- |
 | Round 1 | 10 | 4  | 4/10, In Progress |
 | Round 2 | 10 | 7  | 7/10, In Progress |
@@ -68,20 +68,20 @@ Please select the mission type that best suits your purpose by referring to the 
 
 ## DIFFICULTY — Increasing Difficulty Mission
 
-* The difficulty of the achievement goal increases with each round.
-* If the number of rounds and the number of difficulty settings do not match, it resets to the initial difficulty.
+* The difficulty of the achievement goal increases as the round number increases.
+* If the round number and the number of difficulty settings do not match, it resets to the initial difficulty.
 
-⚠️ It is recommended to set the number of rounds and the number of difficulty settings to be the same.
+⚠️ It is recommended to set the round number and the number of difficulty settings to be the same.
 
 | Field | Value      | Example    |
 | ----- | ---------- | ---------- |
 | Mission Type | DIFFICULTY | DIFFICULTY |
-| Rounds     | Set to 2 or higher    | 4          |
+| Rounds    | Set to 2 or more    | 4          |
 | Achievement Goals | Difficulty Level     | 20,40,60   |
 
 ### How It Works
 
-| Round    | Goal                                                 | Achieved | Status         |
+| Rounds    | Goals                                                 | Achieved | Status         |
 | --- | -------------------------------------------------- | -- | ---------- |
 | Round 1 | 20                                                 | 10 | 10/20, In Progress |
 | Round 2 | 40                                                 | 5  | 5/40, In Progress  |

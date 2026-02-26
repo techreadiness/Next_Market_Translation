@@ -37,7 +37,7 @@ metaLinks:
 {% endstep %}
 
 {% step %}
-#### Request Section
+#### Request for Sale
 
 * [판매 등록 ](sale.md#post-api-v1-sale-b2c)
 * [판매 변경 ](sale.md#patch-api-v1-sale-b2c-b2csaleid)
@@ -45,7 +45,7 @@ metaLinks:
 {% endstep %}
 {% endstepper %}
 
-### B2C Item Sales
+### B2C Item Sale
 
 * [원타임 토큰 요청](authentication-security.md#post-api-v1-auth-token)
 * [판매량 통계 조회](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-4#get-api-v1-sale-b2c-statistics)
@@ -54,7 +54,7 @@ metaLinks:
 * [판매 목록 조회](sale.md#get-api-v1-sale-b2c)
 * [B2C 판매 삭제](sale.md#delete-api-v1-sale-b2c-b2csaleid)
 
-### C2C Item Listings
+### C2C Item Listing
 
 * [미디어 파일 업로드](item.md#post-api-v1-media-upload)
 * [아이템 등록 ](item.md#post-api-v1-item)
@@ -62,7 +62,7 @@ metaLinks:
 * [아이템 능력 설정 수정](item.md#put-api-v1-item-ability-code)
 * [아이템 능력 설정 목록 조회](item.md#get-api-v1-item-ability)
 
-### C2C Item Sales 
+### C2C Item Sale 
 
 * [원타임 토큰 요청](authentication-security.md#post-api-v1-auth-token)
 * [아이템 배송 이력 조회](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-2#get-users-api-v1-item-send-item-guid-guid)

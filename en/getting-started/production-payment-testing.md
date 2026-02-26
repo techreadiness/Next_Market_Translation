@@ -19,18 +19,18 @@ As live payment tests involve actual transactions, please strictly adhere to pri
 This document outlines the live payment test process conducted in the Prod environment.
 
 * <mark style="color:$danger;">**No separate testing fees are provided**</mark> for live payment tests.
-*   The test proceeds in the following order:
+*   Testing proceeds in the following order:
 
     &gt; **Pre-share test plan → Next Market review and consultation → Test execution → Share results → (If necessary) Process payment cancellation**
 
 ### 1. Pre-share Test Plan (Required)
 
-The following items must be organized and **shared with Next Market at least 3 business days prior to the desired test date**.
+The following items must be compiled and **shared with Next Market at least 3 business days prior to the desired test date**.
 
 | Items to Provide        | Description                                                                                                                                                                                                                                                                     |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Test Scope       | <ul><li>Target Store</li><li><p>Product Category</p><ul><li>B2C/C2C Classification</li><li>Product Name or sale_id</li></ul></li></ul>                                                                                                                                                                                               |
-| Test Payment Method Information | <ul><li><p>Enter payment method information to use during testing</p><ul><li>Card Information </li><li>Corporate Card/Personal Card</li><li>Card Name</li></ul></li></ul><p>⚠️ Cancellation policies vary by payment method. Please review <a href="production-payment-testing.md#undefined-3">cancellation policies</a> and confirm <a href="production-payment-testing.md#undefined-1">which payment methods allow cancellations</a>.</p> |
+| Test Payment Method Information | <ul><li><p>Enter payment method information to be used during testing</p><ul><li>Card Information </li><li>Corporate Card/Personal Card</li><li>Card Name</li></ul></li></ul><p>⚠️ Cancellation policies vary by payment method. Please review <a href="production-payment-testing.md#undefined-3">cancellation policies</a> and <a href="production-payment-testing.md#undefined-1">eligible payment methods</a>.</p> |
 | Test Payment Details | <ul><li>Desired Number of Payments </li><li>Desired Cancellation Status</li></ul>                                                                                                                                                                                                                                                |
 | Test Schedule Information    | Scheduled Test Date and Time                                                                                                                                                                                                                                                                            |
 | Test Account Information    | Test Account GUID                                                                                                                                                                                                                                                                                    |
@@ -38,7 +38,7 @@ The following items must be organized and **shared with Next Market at least 3 b
 #### Payment Notes 
 
 **\[ Payment Country and Currency Settings ]** \
-You can select the payment country and currency through the **Billing Address information settings** within the payment screen. Please set the country you wish to test first before proceeding with the payment.
+You can select the payment country and currency via the **Billing Address information settings** within the payment screen. Please set the country you wish to test first before proceeding with payment.
 
 **\[ Country-Specific Payment Restrictions ]**\
 For certain countries and payment methods, **payments using credit cards issued in Korea may be restricted**. Please verify the following details before conducting payment tests or actual transactions.
@@ -51,9 +51,9 @@ For certain countries and payment methods, **payments using credit cards issued 
   * Payments with credit cards issued in Korea are not supported.
 
 \
-If you need to test international payments, please prepare a payment method issued in the relevant country or a supported alternative payment method in advance.
+If you need to test an overseas payment, please prepare a payment method issued in the relevant country or a supported alternative payment method in advance.
 
-#### Payment Methods Supported for Cancellation
+#### Payment Methods Allowing Cancellation
 
 | Region (Billing Location) | Product Currency                      | Payment Method                                                                        |
 | -------- | --------------------------- | ---------------------------------------------------------------------------- |
@@ -66,7 +66,7 @@ If you need to test international payments, please prepare a payment method issu
 
 * Payment cancellation availability varies by payment method.
 * Cancellation is possible only for eligible methods, following pre-agreed procedures.
-* If you do not wish to cancel payments, **testing can proceed using non-cancellable payment methods.**
+* If cancellation is not desired, **testing can proceed using non-cancellable payment methods.**
 * Cancellation may incur <mark style="color:$danger;">**refund processing fees**</mark>. These refund fees will be jointly borne by the developer and LINE NEXT.
 
 ### 2. NEXT Market Review and Consultation
@@ -76,9 +76,9 @@ If you need to test international payments, please prepare a payment method issu
 
 ### 3. Test Execution
 
-#### NEXT Market Preparation Items
+#### NEXT Market Preparation
 
-① Setting Test Target Products
+① Set up the test product
 
 * Product exposure is based on the set **product launch time**.
 * For testing, the product launch time must be **temporarily adjusted to the test time**.
@@ -92,21 +92,21 @@ If you need to test international payments, please prepare a payment method issu
 {% hint style=&quot;warning&quot; %}
 **If Maintenance Mode is Not Set**
 
-Conducting live payment testing without setting the service to maintenance mode allows general users to access the payment page and make payments. If testing is required during actual sales periods, please note that user payments may occur. Please consider this when coordinating payment test schedules in advance.
+Conducting live payment testing without setting the service to maintenance mode allows general users to access the payment page and make payments. If testing is required during actual sales periods, user payments may occur. Please consider this when coordinating payment test schedules in advance.
 {% endhint %}
 
 #### Developer Testing Procedure
 
-* Conduct actual payment tests based on the **payment methods and transaction counts** agreed upon in advance.
+* Conduct live payment tests based on the **payment methods and transaction counts** agreed upon in advance.
 
 ### 4. Sharing Test Results
 
-* After completing testing, you must share the following information with Next Market:
+* After completing testing, share the following information with Next Market:
   * Test account GUID
   * Payment methods used
   * Payment details (order_id, payment amount)
 
 ### 5. Payment Cancellation Processing
 
-* For payment methods supporting cancellations, if cancellation is requested, process cancellations for all orders included in the test results.
+* For payment methods that support cancellation, if cancellation is requested, process cancellations for all orders included in the test results.
 * Cancellation requests are handled by the Next Market development team.

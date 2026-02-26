@@ -19,7 +19,7 @@ Payment methods can be selected and provided according to the game company&#x27;
 **Payment Precautions**\
 \
 For certain countries and payment methods, **payments using credit cards issued in South Korea may be restricted**.\
-Please verify the following details before conducting payment tests or actual payments.
+Please verify the following details before conducting payment tests or actual transactions.
 
 * **Taiwan**
   * Payment method: **MyCard**
@@ -29,5 +29,5 @@ Please verify the following details before conducting payment tests or actual pa
   * Payments with credit cards issued in Korea are not supported.
 
 \
-If you need to test international payments, please prepare a payment method issued in the relevant country or a supported alternative payment method in advance.
+If you need to test international payments, please prepare a payment method issued in the relevant country or a supported alternative payment method beforehand.
 {% endhint %}
