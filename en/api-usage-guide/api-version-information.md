@@ -5,8 +5,7 @@ metaLinks:
       https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/api-usage-guide/api-version-information
 ---
 
-
-# Version Information
+# API Version Information
 
 ## Release Notes
 
@@ -26,7 +25,7 @@ metaLinks:
 
 ### v1.7\_2025.07.24
 
-* Added BadRequest if the Region in `[스토어 인증용 원타임 토큰 요청](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-1#undefined-2)` is a Sanction Country
+* Added BadRequest if Region in [스토어 인증용 원타임 토큰 요청](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-1#undefined-2) is a Sanction Country
 
 ### v1.6\_2025.07.18
 
@@ -51,7 +50,7 @@ metaLinks:
 
 ### v1.2\_2025.06.26
 
-* Item ability settings: Changed color to content.color
+* Item ability settings: Modified color to content.color
 * Added [C2C 판매 취소 요청](https://github.com/tech-support-trade/docs/wiki/API-Guide#C2C-%ED%8C%90%EB%A7%A4-%EC%B7%A8%EC%86%8C-%EC%9A%94%EC%B2%AD)
 
 ### v1.1\_2025.06.24
@@ -64,4 +63,4 @@ metaLinks:
 ### v1.0\_2025.05.27
 
 * Defined B2C, C2C, Mission\&amp;Reward; API spec
-* 🟡 Caution: Some features are under review or only available in preview; verification is required before use.
+* 🟡 Note: Some features are under review or only available in preview, so verification is required before use.

@@ -7,6 +7,4 @@ metaLinks:
 
 # C2C Item Sales Registration
 
-
-
-<figure><img src="../../../.gitbook/assets/papago_image (3).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/NM_C2CFlow.png" alt=""><figcaption></figcaption></figure>

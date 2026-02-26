@@ -4,18 +4,19 @@ metaLinks:
     - https://app.gitbook.com/s/pt4moEMpSf4BGvjJCzQm/faq
 ---
 
-
-# Frequently Asked Questions
+# FAQ
 
 ## API Credentials
 
 <details>
 
-<summary>How can I obtain API Credentials information?</summary>
+<summary>How can I obtain API Credentials?</summary>
 
-After receiving corporate and store information and registering with NEXT Market, API Credentials will be issued. Following issuance, they are delivered via email to each designated contact.
+After receiving corporate and store information and registering with NEXT Market, API Credentials will be issued. Once issued, they will be sent to each responsible party's email address.
 
-</details>## Firewall Exemption Procedure
+</details>
+
+## Firewall Exemption Procedure
 
 <details>
 
@@ -45,7 +46,7 @@ If using a dynamic IP, ACL registration is required each time, and processing ma
 
 <details>
 
-<summary>How do I verify normal operation after firewall removal?</summary>
+<summary>How do I verify normal operation after disabling the firewall?</summary>
 
 ```
 curl --user &quot;{apiKey}:{credential}&quot; \
@@ -57,11 +58,9 @@ curl --user &quot;{apiKey}:{credential}&quot; \
 
 <details>
 
-<summary>Can I use a custom port number on the developer&#x27;s server domain?</summary>
+<summary>Can I use a custom port number on the developer's server domain?</summary>
 
-Yes, it is possible.
-However, in the Preview environment, if you use **ports 80 or 443**, **NEXT Market → Game Outbound ACL configuration is unnecessary**.
-Therefore, if you want to test quickly, we recommend using port 80 or 443.
+Yes, it is possible. However, in the Preview environment, if you use **ports 80 or 443**, **NEXT Market → Game Outbound ACL configuration is unnecessary**. Therefore, if you want to test quickly, we recommend using port 80 or 443.
 
 </details>
 
@@ -71,7 +70,9 @@ Therefore, if you want to test quickly, we recommend using port 80 or 443.
 
 This is because access is denied due to incomplete ACL configuration.
 
-</details>## API
+</details>
+
+## API
 
 <details>
 
@@ -83,9 +84,9 @@ It uses a 13-digit integer value in milliseconds.
 
 <details>
 
-<summary>What is the response header/format for the Game Account Verification API?</summary>
+<summary>What are the response headers/format for the Game Account Verification API?</summary>
 
-The response must be in the `Content-Type: application/json` format.
+The response must be in `Content-Type: application/json` format.
 
 </details>
 
@@ -106,7 +107,7 @@ Error responses have the following JSON structure:
 
 <details>
 
-<summary>Can I add an authentication header to the NEXT Market -&gt; Game callback?</summary>
+<summary>Can authentication headers be added to the NEXT Market -> Game callback?</summary>
 
 Yes, it is possible. Custom implementations such as API Key/Secret or token-based methods can be applied.
 
@@ -118,7 +119,9 @@ Yes, it is possible. Custom implementations such as API Key/Secret or token-base
 
 Yes, they must be configured independently.
 
-</details>## One-time authentication token for store authentication
+</details>
+
+## One-time authentication token for store authentication
 
 <details>
 
@@ -126,7 +129,7 @@ Yes, they must be configured independently.
 
 It is a token that allows a user authenticated in the game to log in as a store-authenticated user.
 
-Navigating to https://{domain}.nextmarket.games/auth?token={token} in an external browser will grant access as an authenticated user.
+Navigating to https://{domain}.nextmarket.games/auth?token={token} in an external browser will log you in as an authenticated user.
 
 </details>
 
@@ -154,7 +157,7 @@ How to set redirectPath
 
 * B2C page: /shop
 * C2C page: /marketplace
-* Mission &amp; Rewards page: /mission
+* Mission & Rewards page: /mission
 
 However, for C2C sales registration, the set redirectPath is ignored, and the user is directed directly to the C2C sales registration page.
 
@@ -166,17 +169,17 @@ Additionally, except for C2C sales registration, query parameters can be specifi
 
 <summary>What are examples of store navigation links?</summary>
 
-Example link: https://{domain}/auth?token=xxxx\&amp;redirectPath;=/xxxx/xxx?param=key 
+Example link: https://{domain}/auth?token=xxxx\&amp;redirectPath;=/xxxx/xxx?param=key
 
 </details>
 
 <details>
 
-<summary>What is the validity period of the one-time authentication token for store authentication?</summary>
+<summary>What is the validity period for the one-time authentication token used for store authentication?</summary>
 
 The token expires immediately after use, while the session persists separately.
 
-Sessions are renewed hourly based on user activity and can be extended up to 180 days, though this may vary operationally. 
+Sessions are renewed hourly based on user activity and can be extended up to 180 days, though this may vary operationally.
 
 </details>
 
@@ -184,7 +187,7 @@ Sessions are renewed hourly based on user activity and can be extended up to 180
 
 <summary>Why is an error returned when region is set to ALL?</summary>
 
-The error occurs because NEXT Market cannot recognize the region. 
+The error occurs because NEXT Market cannot recognize the region.
 
 The region must be provided as the agreed-upon country code ([https://en.wikipedia.org/wiki/ISO\_3166-1\_alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 
@@ -198,7 +201,9 @@ The region must be provided as the agreed-upon country code ([https://en.wikiped
 
 You can set any value as long as it is a string that can be disclosed to the logged-in user.
 
-</details>## Game Account Status Inquiry
+</details>
+
+## Game Account Status Inquiry
 
 <details>
 
@@ -206,9 +211,11 @@ You can set any value as long as it is a string that can be disclosed to the log
 
 The path following the endpoint is fixed.
 
-However, if setting the root path to `/next-market` is difficult, you can configure a subpath using the format `https://{domain}/{subpath}/next-market/…`. Share this configuration, including the subpath, with the development team for setup.
+However, if setting the root path to `/next-market` is difficult, you can configure a subpath using the format `https://{domain}/{subpath}/next-market/…`. Share this subpath, including the `subpath`, with the development team for configuration.
 
-</details>## Items
+</details>
+
+## Items
 
 <details>
 
@@ -226,15 +233,13 @@ When using special characters, the underscore `_` separator cannot be used; hyph
 
 name, description, subItemList (optional), policies.whiteList (optional), and policies.blacklist (optional) must be registered.
 
-
-
 </details>
 
 <details>
 
 <summary>Is SKU registration required for both B2C and C2C?</summary>
 
-Yes, that&#x27;s correct. SKU registration is mandatory for items requiring shipping and transaction processing. (Register via API)
+Yes, that's correct. SKU registration is mandatory for items requiring shipping and transaction processing. (Register via API)
 
 </details>
 
@@ -242,7 +247,7 @@ Yes, that&#x27;s correct. SKU registration is mandatory for items requiring ship
 
 <summary>Do package sub-items also need to be registered?</summary>
 
-Yes, that&#x27;s correct. All sub-items must be registered individually for package screen display and transmission processing.
+Yes, that's correct. All sub-items must be registered individually for package screen display and transmission processing.
 
 </details>
 
@@ -250,18 +255,17 @@ Yes, that&#x27;s correct. All sub-items must be registered individually for pack
 
 <summary>Does subItemList reference the individually registered SKUs?</summary>
 
-It is used solely for referencing and displaying the registered individual SKUs.
+It is used solely for display purposes, referencing the registered individual SKUs.
 
 </details>
 
 <details>
 
-<summary>How do I add line breaks in the item description?</summary>
+<summary>How do I create line breaks in the item description?</summary>
 
-You can apply line breaks using the `
-` or `<br>
+You can apply line breaks using the or \`<br>
 
-` tags.
+\` tags.
 
 </details>
 
@@ -271,7 +275,7 @@ You can apply line breaks using the `
 
 For `lang`, you must use lowercase letters and underscores (`_`). It must be managed separately from the `region` in the one-time authentication token.
 
-However, since ISO-639-1 does not simultaneously support Simplified and Traditional Chinese, we only support Traditional Chinese and not Simplified Chinese. If Simplified Chinese support is required, separate exception handling is necessary to maintain backward compatibility, so consultation is required.
+However, since ISO-639-1 does not simultaneously support Simplified and Traditional Chinese, we only support Traditional Chinese and not Simplified Chinese. If Simplified Chinese support is required, separate exception handling is necessary to maintain backward compatibility, so consultation is needed.
 
 </details>
 
@@ -287,13 +291,15 @@ Items must use a 72x72px size, including the background.
 
 <summary>Can LINE NEXT handle API calls like item registration on our behalf?</summary>
 
-This requires discussion. If you need assistance, LINE NEXT can handle the registration if you provide the parameter values in TSV or JSON format.
+This requires discussion. If you need assistance, LINE NEXT can handle the registration on your behalf if you provide the parameter values in TSV or JSON format.
 
-</details>## Sales
+</details>
+
+## Sales
 
 <details>
 
-<summary>How do I use the sku, serialNumber, and amount parameters when registering C2C items?</summary>
+<summary>How are the sku, serialNumber, and amount parameters used during C2C registration?</summary>
 
 Example)
 
@@ -331,8 +337,8 @@ No. If changes to price or composition are needed, a new sales registration must
 
 <summary>How do limitPurchaseCount, periodicType, and resetAt work?</summary>
 
-* limitPurchaseCount: 1 &amp; periodicType: null &amp; resetAt: null:  First purchase allowed per account
-* limitPurchaseCount: 1 &amp; periodicType: is not null &amp; resetAt: is not null:  One purchase allowed per period, with purchase count reset at period start
+* limitPurchaseCount: 1 & periodicType: null & resetAt: null: First purchase allowed per account
+* limitPurchaseCount: 1 & periodicType: is not null & resetAt: is not null: One purchase allowed per period, with purchase count reset at period start
 * limitPurchaseCount: null: No purchase limit
 
 </details>
@@ -355,7 +361,7 @@ The ID returned after registration is the saleId.
 
 <details>
 
-<summary>For package products, which value is used for quantity display / delivery quantity?</summary>
+<summary>For package products, which value is used to display the quantity and determine the payment amount?</summary>
 
 It is displayed based on the subItemList.amount value.
 
@@ -365,9 +371,11 @@ It is displayed based on the subItemList.amount value.
 
 <summary>What is section registration?</summary>
 
-A list of sections is required to display B2C products. If only one section exists, a single column is used. If two or more sections exist, the top tabs and anchors on the webshop will function.
+A list of sections is required to display B2C products. If there is only one section, a single column is used. If there are two or more sections, the top tabs and anchors on the webshop will function.
 
-</details>## Payment
+</details>
+
+## Payment
 
 <details>
 
@@ -383,7 +391,7 @@ For unsupported currencies, payment can be made in USD.
 
 <summary>How do I test actual payments?</summary>
 
-Virtual payments are processed in the Preview environment, while the Prod environment requires actual credit card payments (testing is only possible with international credit cards).
+Virtual payments are processed in the Preview environment. Actual credit card payments (only testable with international credit cards) are required in the Prod environment.
 
 </details>
 
@@ -419,7 +427,9 @@ Minimum payment amount per currency
 
 The minimum price for B2C products must be set above the minimum payment amount per currency. Therefore, consultation with LINE NEXT is required before finalizing prices.
 
-</details>## Shipping
+</details>
+
+## Shipping
 
 <details>
 
@@ -441,7 +451,7 @@ Uniqueness is guaranteed. Even if the same request occurs multiple times, the re
 
 <summary>Can purchase history be checked using the requestId?</summary>
 
-It is used solely as an identifier for delivery requests. While it can be used to verify the result of requests between servers, it cannot be utilized as an identifier for separate inquiries such as purchase history.
+It is used solely as an identifier for delivery requests. While it can be used to verify the outcome of requests between servers, it cannot be utilized as an identifier for separate inquiries such as purchase history.
 
 </details>
 
@@ -449,23 +459,25 @@ It is used solely as an identifier for delivery requests. While it can be used t
 
 <summary>Can shipping requests be delayed after a successful payment?</summary>
 
-Delays may occur due to simultaneous purchase volumes, but a reprocessing mechanism exists to prevent issues.
+Delays may occur due to factors like simultaneous purchase volume, but a reprocessing mechanism exists to prevent issues.
 
 </details>
 
 <details>
 
-<summary>Regarding delivery history lookup, if a delivery isn&#x27;t received, does acquiredAt show as 0?</summary>
+<summary>Regarding delivery history inquiries, if a delivery isn't received, does acquiredAt show as 0?</summary>
 
 acquiredAt signifies the delivery completion time, so it always has a value. If a delivery failure occurs, the query result will show no value. In such cases, it must be judged as an abnormal delivery.
 
-</details>## Refunds
+</details>
+
+## Refunds
 
 <details>
 
 <summary>How are refunds processed?</summary>
 
-Refunds follow this sequence: User request → Developer retrieves the item → Decision to process the refund after settlement review → Refund via the PG company. All refunds are processed manually.
+Refunds follow this sequence: User request → Developer retrieves the item → Decision to process the refund after settlement review → Refund via the payment gateway (PG). All refunds are processed manually.
 
 </details>
 
@@ -473,7 +485,7 @@ Refunds follow this sequence: User request → Developer retrieves the item → 
 
 <summary>How are refund notices applied?</summary>
 
-Guidance text can only be adjusted by country in the web shop. In-game, the &quot;no refunds&quot; policy text is used for consistency.
+Guidance text can only be adjusted by country in the web shop. In-game, the "no refunds" policy text is used for consistency.
 
 </details>
 
@@ -487,9 +499,11 @@ Yes, they are possible. However, since PG company fees are incurred for payments
   * Testing is only possible with international credit card payments
   * $0.3 + VAT incurred per payment/cancellation
     * $0.66 incurred when canceling after payment
-  * Contractual fees will be deducted from the next month&#x27;s settlement → Shared by the developer and NEXT
+  * Contractual fees will be deducted from the following month's settlement → Shared between the developer and NEXT
 
-</details>## Settlement
+</details>
+
+## Settlement
 
 <details>
 
@@ -498,11 +512,13 @@ Yes, they are possible. However, since PG company fees are incurred for payments
 Sales settlement targets are aggregated monthly. Here is the timeline:
 
 * Sales aggregation and verification: 3 business days into the following month
-* Biz Report provision: 4th ~ 5th business day into the following month
+* Biz Report provision: 4th \~ 5th business day into the following month
 * Settlement instruction: 20th of the following month
 * Settlement payment: 21st of the following month
 
-</details>## Missions &amp; Rewards
+</details>
+
+## Missions & Rewards
 
 <details>
 
@@ -524,7 +540,7 @@ However, if character-level verification is required, a separate character-level
 
 <details>
 
-<summary>How does the flow for mission completion verification and user reward receipt work?</summary>
+<summary>How does the flow for mission completion verification and user reward receipt proceed?</summary>
 
 [Flow 확인하러가기](https://github.com/tech-support-trade/docs/wiki/%EB%AF%B8%EC%85%98-%EB%8B%AC%EC%84%B1-%ED%99%95%EC%9D%B8%EA%B3%BC-%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%B3%B4%EC%83%81-%EC%88%98%EB%A0%B9)
 
@@ -532,7 +548,7 @@ However, if character-level verification is required, a separate character-level
 
 <details>
 
-<summary>Why is the mission participation button hidden in mobile/tablet environments?</summary>
+<summary>Why is the mission participation button hidden in mobile/pad environments?</summary>
 
 The default participation button on the mission page links to an external page. In webview environments, it is hidden to prevent app exits. Once a mission is completed or subsequent steps are finished, the reward button or reward payment completion button will display normally.
 
@@ -551,19 +567,21 @@ It is displayed in PC environments and is hidden only in mobile/pad environments
   * Example: Round 1: Kill 20 enemies (0/20) → Round 2: Kill 40 enemies (0/40)
 * CHALLENGE: Set ongoing missions as a collection. All designated missions must be completed together to receive rewards.
 
-</details>## Web Shop
+</details>
+
+## Web Shop
 
 <details>
 
-<summary>What determines which languages are displayed in the Webshop?</summary>
+<summary>What determines which languages are displayed in the web shop?</summary>
 
 The priority order is as follows:
 
-* Select the languages to support in the web shop from the 5 languages provided by NEXT Market, and set the store&#x27;s default language from among them.
+* Select the languages to support in the web shop from the 5 languages provided by NEXT Market, and set the store's default language from among them.
   * Available languages: English, Korean, Japanese, Chinese (Traditional), Thai
 * Non-logged-in users: Store default language
-* Logged-in users: User&#x27;s set language or language set in the footer
-  * However, if the user&#x27;s browser/OS language is not one provided by NEXT Market, the store default language is displayed
+* Logged-in users: User's set language or language set in the footer
+  * However, if the user's browser/OS language is not one provided by NEXT Market, the store default language is displayed
 
 </details>
 
@@ -571,13 +589,15 @@ The priority order is as follows:
 
 <summary>If I open the Preview environment using a token issued in the Prod environment, will the Prod web shop appear?</summary>
 
-Preview and Prod are completely independent environments, so authentication will not work. The Prod web shop has its own separate domain.
+Preview and Prod are completely independent environments, so authentication will not work. The Prod web shop has a separate domain.
 
-</details>## Webview
+</details>
+
+## Webview
 
 <details>
 
-<summary> How can NEXT Market be provided as an in-game Webview?</summary>
+<summary>How can NEXT Market be provided as an in-game Webview?</summary>
 
 If you plan to provide NEXT Market via an in-game Webview, prior notification to LINE NEXT is required.
 
@@ -585,7 +605,9 @@ Please refer to the following guide document for details. ([가이드](https://n
 
 )
 
-</details>## Testing
+</details>
+
+## Testing
 
 <details>
 
@@ -600,11 +622,12 @@ The Preview Store is a page that may be visible to general users. Therefore, car
 <summary>What should be verified during Preview testing?</summary>
 
 We recommend focusing on:
-- Navigation flow when moving from the game to the web shop (via Webview or external browser)
-- Login functionality
-- Item delivery after purchasing products
 
-To allow time for issue resolution, please complete testing for the above items at least 3 business days before the web shop launch.
+* Navigation flow when moving from the game to the web shop (via Webview or external browser)
+* Login functionality
+* Item delivery after purchasing goods
+
+To address any issues discovered during testing, please complete testing for the above items at least 3 business days before the web shop opens.
 
 </details>
 
@@ -612,7 +635,7 @@ To allow time for issue resolution, please complete testing for the above items 
 
 <summary>Why is inspection mode enabled in the Preview environment?</summary>
 
-We conduct testing with inspection mode enabled in the Preview environment to enhance accessibility and prevent general users from accessing the store before its official launch. Please note that testing will follow the same procedure with inspection mode enabled at the Prod launch as well.
+We conduct testing with inspection mode enabled in the Preview environment to enhance accessibility and prevent general users from accessing the store before its public release. Please note that testing will follow the same inspection mode procedure when the Prod environment opens.
 
 For detailed information, please refer to the following guide document: ([가이드](https://next-market-admin.gitbook.io/next-market-docs/api/undefined-8#market)
 
@@ -626,12 +649,14 @@ For detailed information, please refer to the following guide document: ([가이
 
 You must register the product again and then proceed with testing. However, please note that in unavoidable cases, testing support may be possible after consultation with LINE NEXT.
 
-</details>## Policy
+</details>
+
+## Policy
 
 <details>
 
 <summary>Can I use NEXT Market if my game account is restricted?</summary>
 
-No, this is not possible. NEXT Market is only accessible after logging into the game, so it cannot be used if the game account is restricted. However, viewing the item list may still be possible.
+No. NEXT Market is only accessible after logging into the game, so it cannot be used if the game account is restricted. However, viewing the item list may still be possible.
 
 </details>

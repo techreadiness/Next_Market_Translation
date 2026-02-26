@@ -32,7 +32,7 @@ Sections are **classification areas for displaying B2C products in groups**. Sec
 
 * Number of sections that can be displayed: **Minimum 2 \~ Maximum 4**
 * To ensure stable UI, the **maximum is limited to 4**.
-* If section configuration is not necessary, **you do not need to register any sections.**
+* If section configuration is not needed, **you do not need to register any sections.**
 
 {% stepper %}
 {% step %}
@@ -72,7 +72,7 @@ Sections are **classification areas for displaying B2C products in groups**. Sec
 ⚠️ Important Notes
 
 * Section edits are **immediately reflected on NEXT Market**.
-* Changing the display order or section name may affect the actual product display screen. **Exercise caution when making changes during operation**.
+* Changing the display order or section name may affect the actual product display screen. **Please exercise caution when making changes during operation**.
 
 <figure><img src="../../.gitbook/assets/B2C 상품 관리_섹션 수정.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -93,7 +93,7 @@ B2C product registration allows you to create B2C products and manage sales info
 {% step %}
 #### Product Registration
 
-* Select the Product Registration button to proceed to the product registration screen.
+* Select the Product Registration button to go to the product registration screen.
 
 <figure><img src="../../.gitbook/assets/B2C 상품 등록_상품 등록.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -103,12 +103,12 @@ B2C product registration allows you to create B2C products and manage sales info
 
 Enter the basic information for the B2C product.
 
-| Field               | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Media               | <ul><li><p>Upload Method</p><ul><li>URL Input: Enter the URL of an already uploaded media file</li><li>File Upload: Select and upload a local file</li></ul></li><li><p>Supported Formats</p><ul><li>IMAGE: JPG, PNG, WebP</li></ul></li><li><p>Upload Limit</p><ul><li>File size: 10MB or less</li><li>Image Size: 514x514px including background</li></ul></li></ul>                                                                                                                                                                                                                                                                             |
-| Media Type          | <ul><li>Currently only image types can be selected</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Product Name        | <ul><li>Multilingual input support: en, ko, ja, th, zh</li><li>Value displayed as the product title on the item shop page</li><li>Must be registered for languages provided by the marketplace</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Product Description | <ul><li>Supports multilingual input: en, ko, ja, th, zh</li><li>Value displayed as the product description on the item shop page</li><li>Must be registered for languages provided by the marketplace</li><li><p>Product Description Writing Guide</p><ul><li><p>Required Content</p><ul><li>Item description applicable to the product</li><li>Refund policy</li><li>Item delivery method (e.g., mailbox delivery, etc.)</li></ul></li><li><p>Optional Content</p><ul><li>Item restrictions applicable to the product (e.g., character binding)</li><li>Purchase Restriction Conditions (e.g., 2 purchases per day)</li></ul></li></ul></li></ul> |
+| Field               | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Media               | <ul><li><p>Upload Method</p><ul><li>URL Input: Enter the URL of an already uploaded media file</li><li>File Upload: Select and upload a local file</li></ul></li><li><p>Supported Formats</p><ul><li>IMAGE: JPG, PNG, WebP</li></ul></li><li><p>Upload Limit</p><ul><li>File size: 10MB or less</li><li>Image Size: 514x514px including background</li></ul></li></ul>                                                                                                                                                                                                                                                                   |
+| Media Type          | <ul><li>Currently only image types can be selected</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Product Name        | <ul><li>Multilingual input support: en, ko, ja, th, zh</li><li>Value displayed as the product title on the item shop page</li><li>Must be registered for languages provided by the marketplace</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Product Description | <ul><li>Supports multilingual input: en, ko, ja, th, zh</li><li>Value displayed as the product description on the item shop page</li><li>Must be registered for languages provided by the marketplace</li><li><p>Product Description Writing Guide</p><ul><li><p>Required Content</p><ul><li>Item description applicable to the product</li><li>Refund policy</li><li>Item delivery method (e.g., mailbox delivery, etc.)</li></ul></li><li><p>Optional Content</p><ul><li>Item restrictions applicable to the product (e.g., character binding)</li><li>Purchase Restrictions (e.g., 2 purchases per day)</li></ul></li></ul></li></ul> |
 
 <figure><img src="../../.gitbook/assets/B2C 상품 등록_기본 정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -127,7 +127,7 @@ Set the price for B2C products.
 
 \| | Refund Type |
 
-* Select according to the game's refund policy
+* Select according to game refund policy
   * Non-refundable
   * Refundable
   * Partial Refund
@@ -147,7 +147,7 @@ Set the price for B2C products.
 
 \| | Product Price (USDt) |
 
-* Enter USDt amount
+* Enter USDt Amount
 * Format: Input possible to two decimal places
 * However, prices must be entered within the minimum to maximum range
   * USDt: 0.1 \~ 750,000
@@ -178,7 +178,7 @@ Enter settings related to the purchase and display of B2C products. This determi
 
 \| | Shipping Type |
 
-*   Select the shipping method to be used for the purchase
+*   Select the shipping method to be used for purchases
 
     * Automatic Shipping: System automatically ships upon purchase completion
     * Manual Shipping: Ship manually at a specific time after purchase completion
@@ -192,7 +192,7 @@ Enter settings related to the purchase and display of B2C products. This determi
 \| | Adult Verification Required |
 
 * Enable if the product requires adult verification
-* Product images will not be displayed until adult verification is completed; images will display normally after verification
+* Product images will not be displayed before age verification; they will display normally after verification
 * Example image (before adult verification)
 
 <figure><img src="../../.gitbook/assets/B2C 상품 등록_성인인증.png" alt="" width="133"><figcaption></figcaption></figure>
@@ -215,7 +215,7 @@ Enter settings related to the purchase and display of B2C products. This determi
     * None: No setting required
     * Opening date: 2025-12-16 10:00 KST (Tuesday)
     * Daily: 2025-12-15 10:00 KST = Reset daily at 10:00
-    * Weekly: 2025-12-09 10:00 KST = Reset weekly at 10:00 KST on Tuesdays
+    * Weekly: 2025-12-09 10:00 KST = Reset weekly at 10:00 KST on Tuesday
     * Monthly: 2025-12-01 10:00 KST = Resets at 10:00 AM on the 1st of each month
 
 |
@@ -258,7 +258,7 @@ Editing B2C products is a feature used **when you need to change information for
 
 * Access **NEXT Market Console**
 * Select the **B2C Product Management** page from the left menu
-* Choose the product to edit from the product information list
+* Select the product to edit from the product information list
 * Click the **Edit** button
 * Save after modifying the product information
 
@@ -266,10 +266,10 @@ Editing B2C products is a feature used **when you need to change information for
 
 \### ⚠️ Important Notes When Editing
 
-* Changing information for products currently on sale may impact service operations. We recommend thorough review before making changes.
+* Changing information for products currently on sale may impact service operations. Thorough review before making changes is recommended.
 * Price information and linked item lists (SKUs) are non-editable fields.
   * If modification is necessary, please end sales of the existing product and re-register it as a new product.
 * For products currently on sale or already sold out, key fields that could affect purchase history cannot be modified.
-  * Fields that cannot be changed:
+  * Non-editable fields:
     * Sales start date
     * Total purchase limit quantity

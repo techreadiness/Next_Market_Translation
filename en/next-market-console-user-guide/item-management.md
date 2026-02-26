@@ -66,11 +66,11 @@ Item registration supports the **individual registration method**. When register
 
 Enter the item's basic information.
 
-| Field                       | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| SKU (Required)              | <ul><li>Unique item code for identifying and managing the item</li><li>Cannot be duplicated</li><li><p>Format: User-guessable value under 200 characters; alphanumeric and special characters allowed</p><ul><li>Special character: underscore only <code>_</code> Hyphen use is recommended <code>-</code> Use of hyphens is recommended</li></ul><p>⚠️ Please enter the SKU as the exact value used to identify the item in the actual game.</p></li></ul> |
-| Item Name (Required)        | <ul><li>Multilingual input supported: en, ko, ja, th, zh</li><li><p>Value displayed on item list and detail screens</p><ul><li>Must be registered for languages provided by the Market</li></ul></li></ul>                                                                                                                                                                                                                                                   |
-| Item Description (Required) | <ul><li>Set as the item name on the item registration page</li><li>If a detailed description is needed, register separately via <strong>CSV upload</strong></li></ul>                                                                                                                                                                                                                                                                                        |
+| Field                       | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SKU (Required)              | <ul><li>Unique item code for identifying and managing the item</li><li>Cannot be duplicated</li><li><p>Format: User-guessable value under 200 characters; alphanumeric and special characters allowed</p><ul><li>Special character: Underscore only <code>_</code> Hyphen use is recommended <code>-</code> Use of hyphen is recommended</li></ul><p>⚠️ Please enter the SKU as the exact value used to identify the item in the actual game.</p></li></ul> |
+| Item Name (Required)        | <ul><li>Multilingual input supported: en, ko, ja, th, zh</li><li><p>Value displayed on item list and detail screens</p><ul><li>Must be registered for languages provided by the Market</li></ul></li></ul>                                                                                                                                                                                                                                                  |
+| Item Description (Required) | <ul><li>Set as the item name on the item registration page</li><li>If a detailed description is needed, register separately via <strong>CSV upload</strong></li></ul>                                                                                                                                                                                                                                                                                       |
 
 <figure><img src="../../.gitbook/assets/아이템 등록_기본정보.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
@@ -80,7 +80,7 @@ Enter the item's basic information.
 
 * Select and configure if the item is a package item.
 
-⚠️ **Sub-items included in a package item must be pre-registered.**
+⚠️ **Sub-items included in a package item must be registered beforehand.**
 
 | Field        | Value                                                                      |
 | ------------ | -------------------------------------------------------------------------- |
@@ -95,7 +95,7 @@ Enter the item's basic information.
 
 * Select and configure if the item is used for C2C transactions.
 
-⚠️ When registering C2C sales items, this field is for entering attributes per item (SKU). It can be used to display item attributes and validate conditions during C2C transactions.
+⚠️ When registering C2C sales items, this field is for entering attributes per item (SKU). It can be used to display item attributes and verify conditions during C2C transactions.
 
 \| Field | Value | | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| Capability Name |
 
@@ -112,7 +112,7 @@ Enter the item's basic information.
   * Item Quantity (`AMOUNT`): Value representing the quantity contained within the item
 * Item Registration API's `abilties.optionType` Passed as a value
 
-⚠️ **We recommend registering base attributes that do not vary per item together with the SKU during registration** on the Item Management pag&#x65;**.**
+⚠️ **For base attributes that do not vary per item, it is recommended to register them together with the SKU** on the Item Management pag&#x65;**.**
 
 \| | Display Format |
 
@@ -142,7 +142,7 @@ Enter the item's basic information.
 \| | Minimum Price (USDt) |
 
 * Policy restricting the minimum selling price of C2C items
-  * C2C listings cannot be registered at prices lower than the set minimum price
+  * C2C sales cannot be listed below the set minimum price
 * `policies.minPrice`
 
 |
@@ -224,7 +224,7 @@ Use this when you need to modify the information for multiple items at once.
 * Select the **CSV Download** button on the **Item Management** page
 * Change the item information to be modified in the downloaded CSV file
 * Upload the modified CSV file
-* Verify the modification results after upload is complete
+* Review the modification results after upload is complete
 
 <figure><img src="../../.gitbook/assets/아이템 관리_csv 다운로드.png" alt=""><figcaption></figcaption></figure>
 
