@@ -1,10 +1,10 @@
-name: Next-Market-Full-Fix
+name: Next-Market-TW-Fix
 
 on:
   push:
     paths:
-      - "ko/**/*.md"
-  workflow_dispatch: # 수동으로 한 번에 다 밀어버릴 때 사용
+      - "en/**/*.md"  # 영어 파일 감지
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -21,46 +21,48 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Run Secure Translation
+      - name: Run Secure Translation (EN to ZH-HANT)
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: |
           set -e
           
-          # 전체 파일을 다시 만들기 위해 find 사용
-          FILES=$(find ko -name "*.md")
+          # en 폴더에서 모든 md 파일 찾기
+          FILES=$(find en -name "*.md")
 
           for file in $FILES; do
-            REL_PATH=${file#ko/}
-            TARGET_FILE="en/$REL_PATH"
+            REL_PATH=${file#en/}
+            TARGET_FILE="zh-hant/$REL_PATH"  # 대만 번체 폴더
             mkdir -p "$(dirname "$TARGET_FILE")"
 
-            # 1. 머리말(YAML)과 본문(Body)을 칼같이 분리 (에러 원천 차단)
-            # --- 사이의 설정값은 번역기에 안 보내고 따로 보관합니다.
+            # 1. Front Matter(머리말) 분리
             FRONT_MATTER=$(awk 'BEGIN{flag=0} /^---$/{if(flag==0){flag=1; next} else{exit}} flag==1{print}' "$file")
             BODY=$(awk 'BEGIN{flag=0} /^---$/{if(flag==0){flag=1; next} else{flag=2; next}} flag==2{print}' "$file")
 
             if [ -z "$FRONT_MATTER" ]; then BODY=$(cat "$file"); fi
 
-            # 2. 본문 내 보호 조치 (Next Market + 이미지/링크)
+            # 2. 본문 보호 (Next Market 명칭 + 이미지/링크)
+            # 대만 번체 번역 시에도 링크 보호를 위해 span 태그 사용
             PROTECTED_BODY=$(echo "$BODY" | sed 's/Next Market/<span translate="no">Next Market<\/span>/g')
             PROTECTED_BODY=$(echo "$PROTECTED_BODY" | sed -E 's/(!?\[[^]]*\]\([^)]*\))/<span translate="no">\1<\/span>/g')
 
-            # 3. DeepL 호출 (본문만!)
+            # 3. DeepL 호출 (Target: ZH-HANT)
             RESPONSE=$(curl -s -X POST "https://api-free.deepl.com/v2/translate" \
               -H "Authorization: DeepL-Auth-Key $DEEPL_API_KEY" \
               --data-urlencode "text=$PROTECTED_BODY" \
-              -d "source_lang=KO" \
-              -d "target_lang=EN-US" \
+              -d "source_lang=EN" \
+              -d "target_lang=ZH-HANT" \
               -d "tag_handling=html")
 
             TRANSLATED_BODY=$(echo "$RESPONSE" | jq -r '.translations[0].text // empty')
 
-            # 4. 후처리: 보호 태그 제거 및 깨진 링크 공백 수리
+            # 4. 후처리: 보호 태그 제거 및 대만식 전각 괄호/문장부호 교정
+            # 번체 번역 시 괄호가 （ ）로 바뀌는 것을 방지
             FINAL_BODY=$(echo "$TRANSLATED_BODY" | sed -E 's/<\/?span[^>]*>//g')
+            FINAL_BODY=$(echo "$FINAL_BODY" | sed -E 's/（/(/g' | sed -E 's/）/)/g')
             FINAL_BODY=$(echo "$FINAL_BODY" | sed -E 's/(!?\[[^]]*\]) *\(([^)]*)\)/\1(\2)/g')
 
-            # 5. 원본 머리말 다시 붙여서 저장
+            # 5. 저장
             if [ -n "$FRONT_MATTER" ]; then
               echo -e "---\n$FRONT_MATTER\n---\n\n$FINAL_BODY" > "$TARGET_FILE"
             else
@@ -72,6 +74,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add en/
-          git commit -m "docs: en 폴더 전체 재구축 및 metaLinks 에러 수정" || echo "No changes"
+          git add zh-hant/
+          git commit -m "docs: Auto-translate EN to ZH-HANT (Taiwan)" || echo "No changes"
           git push origin main
